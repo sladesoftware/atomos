@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://www.burrosabio.com/wp-content/uploads/2018/06/estructura-de-un-atomo1-450x249.jpg" alt="Slade Software" />
+  ![Slade Software](static/images/logo-transparent.png?raw=true")
 </p>
 
-# Project Atomos ![Project Atomos](https://img.pngio.com/atom-icon-png-401284-free-icons-library-atomic-png-256_256.jpg)
+# Project Atomos ![Project Atomos](https://img.pngio.com/atom-icon-png-401284-free-icons-library-atomic-png-256_256.jpg | width=32)
 Project Atomos is the repository for the company website hosted at https://www.sladesoftware.co.uk/.
 
 ## Prerequisites
