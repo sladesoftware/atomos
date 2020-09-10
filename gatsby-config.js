@@ -2,9 +2,9 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: `Slade Software`,
-    description: `Making your life easier through software development consultancy and implementation services`,
-    author: `Slade Software Ltd`,
+    title: "Slade Software",
+    description: "Making your life easier through software development consultancy and implementation services",
+    author: "Slade Software Ltd",
   },
   plugins: [
     {
@@ -20,10 +20,11 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: "data"
+        name: "images",
+        path: path.join(__dirname, "src/images")
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp"
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp"
   ],
 }

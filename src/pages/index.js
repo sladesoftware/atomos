@@ -1,13 +1,22 @@
 import React from "react"
-import { SEO } from "components"
+import styled from "styled-components"
+import { SEO, Main, Logo, Footer } from "components"
 import "styles/baseline.css"
 
+const Container = styled.div`
+  max-width: 800px;
+`
+
 const IndexPage = () => (
-  <div>
+  <Container>
     <SEO title="Home" />
 
-    <h1>Slade Software</h1>
-  </div>
+    <Main>
+      <Logo />
+    </Main>
+
+    <Footer />
+  </Container>
 )
 
 export default IndexPage

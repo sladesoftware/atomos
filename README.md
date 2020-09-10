@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sladesoftware/atomos/master/static/images/logo-transparent.png?token=ADCBC2IAB62REIP2B43IOMS7LIZIG" />
+  <img src="https://raw.githubusercontent.com/sladesoftware/atomos/master/src/images/logo-transparent.png?token=ADCBC2IAB62REIP2B43IOMS7LIZIG" />
 </p>
 
 # Project Atomos <img src="https://img.pngio.com/atom-icon-png-401284-free-icons-library-atomic-png-256_256.jpg" width="24" />
