@@ -16,7 +16,7 @@ To build and run this project, you will need to install the following prerequisi
 This project has been developed using the Gatsby CLI. As such, to build and run locally, you will need to navigate to the root of the project and run the following command from the terminal:
 
 ```bash
-gatsby dev
+gatsby develop
 ```
 
 ## Author
