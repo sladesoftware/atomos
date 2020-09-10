@@ -1,8 +1,8 @@
 <p align="center">
-  ![Slade Software](static/images/logo-transparent.png?raw=true")
+  ![Slade Software](https://raw.githubusercontent.com/sladesoftware/atomos/master/static/images/logo-transparent.png?token=ADCBC2IAB62REIP2B43IOMS7LIZIG)
 </p>
 
-# Project Atomos ![Project Atomos](https://img.pngio.com/atom-icon-png-401284-free-icons-library-atomic-png-256_256.jpg | width=32)
+# Project Atomos <img src="https://img.pngio.com/atom-icon-png-401284-free-icons-library-atomic-png-256_256.jpg" width="32" />
 Project Atomos is the repository for the company website hosted at https://www.sladesoftware.co.uk/.
 
 ## Prerequisites
