@@ -1,41 +1,27 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import styled from "styled-components"
+import media from "styles/media"
+import logo from "images/logo-transparent.png"
 
-export const QUERY = graphql`
-  query {
-    image: file(relativePath: { eq: "logo-transparent.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
+const Container = styled.div`
+  display: flex;
+  padding: 10% 2rem 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+
+  ${media.phone`
+    padding-top: 40%;
+  `}
 `
 
-const Logo = () => {
-  const data = useStaticQuery(QUERY)
+const Image = styled.img`
+`
 
-  if (!data || !data.image) {
-    return (
-      <p>
-        Failed to load image
-      </p>
-    )
-  }
-
-  return (
-    <>
-      {data && data.image && (
-        <Img
-          alt="Slade Software Ltd"
-          fluid={data.image.childImageSharp.fluid}
-          fadeIn
-        />
-      )}
-    </>
-  )
-}
+const Logo = () => (
+  <Container>
+    <Image src={logo} alt="Slade Software Ltd" />
+  </Container>
+)
 
 export default Logo
