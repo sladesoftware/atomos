@@ -4,8 +4,8 @@ const theme = Object.freeze({
     heading: "'Slade', sans-serif"
   },
   colors: {
-    primary: "blue",
-    secondary: "orange",
+    primary: "#4c95ff",
+    secondary: "#fda340",
     gradient: "linear-gradient(180deg, #009efd 0%, #2af598 100%)",
     light: "#F5F5F5"
   },
