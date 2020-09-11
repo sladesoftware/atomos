@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import "./baseline.css"
 import "sal.js/dist/sal.css"
 
 const GlobalStyles = createGlobalStyle`

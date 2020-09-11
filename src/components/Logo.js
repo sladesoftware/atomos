@@ -19,7 +19,10 @@ const Image = styled.img`
 `
 
 const Logo = () => (
-  <Container>
+  <Container
+    data-sal="fade"
+    data-sal-duration="1000"
+  >
     <Image src={logo} alt="Slade Software Ltd" />
   </Container>
 )

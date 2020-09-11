@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
   background-color: #2a2a2a;
   margin-top: 0.5rem;
   width: 100%;
+  z-index: -1000;
 `
 
 const Content = styled.div`
