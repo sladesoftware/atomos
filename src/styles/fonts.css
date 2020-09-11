@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Slade Software";
+  font-weight: 100;
+  font-style: thin;
+  src: url("thin.woff2") format("woff2"), url("thin.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slade Software";
+  font-weight: 200;
+  font-style: light;
+  src: url("light.woff2") format("woff2"), url("light.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slade Software";
+  font-weight: 300;
+  font-style: medium;
+  src: url("medium.woff2") format("woff2"), url("medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slade Software";
+  font-weight: 400;
+  font-style: normal;
+  src: url("regular.woff2") format("woff2"), url("regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slade Software";
+  font-weight: 500;
+  font-style: semibold;
+  src: url("semibold.woff2") format("woff2"), url("semibold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slade Software";
+  font-weight: 700;
+  font-style: bold;
+  src: url("bold.woff2") format("woff2"), url("bold.woff") format("woff");
+  font-display: swap;
+}
