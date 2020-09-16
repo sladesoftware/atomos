@@ -47,6 +47,7 @@ const NavBar = () => {
     <NavLinks>
       {pages.map((page, index) => (
         <NavItem
+          key={index}
           data-sal="fade"
           data-sal-delay={(index + 1) * 100}
         >
