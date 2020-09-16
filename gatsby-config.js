@@ -5,6 +5,20 @@ module.exports = {
     title: "Slade Software",
     description: "Making your life easier through software development consultancy and implementation services",
     author: "Slade Software Ltd",
+    pages: [
+      {
+        text: "blog",
+        path: "/blog"
+      },
+      {
+        text: "portfolio",
+        path: "/portfolio"
+      },
+      {
+        text: "products",
+        path: "/products"
+      }
+    ]
   },
   plugins: [
     {

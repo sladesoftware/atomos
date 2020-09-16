@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
 const NavLinks = styled.ul`
@@ -25,36 +25,38 @@ const NavLink = styled(Link)`
   }
 `
 
-// TODO: Move this to a query.
-const NavBar = () => (
-  <NavLinks>
-    <NavItem
-      data-sal="fade"
-      data-sal-delay="400"
-    >
-      <NavLink to="/blog">
-        blog
-      </NavLink>
-    </NavItem>
+const QUERY = graphql`
+  query {
+    site {
+      siteMetadata {
+        pages {
+          text
+          path
+        }
+      }
+    }
+  }
+`
 
-    <NavItem
-      data-sal="fade"
-      data-sal-delay="500"
-    >
-      <NavLink to="/portfolio">
-        portfolio
-      </NavLink>
-    </NavItem>
+const NavBar = () => {
+  const { site } = useStaticQuery(QUERY)
 
-    <NavItem
-      data-sal="fade"
-      data-sal-delay="600"
-    >
-      <NavLink to="/products">
-        products
-      </NavLink>
-    </NavItem>
-  </NavLinks>
-)
+  const pages = (site && site.siteMetadata && site.siteMetadata.pages) || []
+
+  return (
+    <NavLinks>
+      {pages.map((page, index) => (
+        <NavItem
+          data-sal="fade"
+          data-sal-delay={(index + 1) * 100}
+        >
+          <NavLink to={page.path}>
+            {page.text}
+          </NavLink>
+        </NavItem>
+      ))}
+    </NavLinks>
+  )
+}
 
 export default NavBar
