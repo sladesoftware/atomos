@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -9,7 +9,7 @@ const Container = styled.div`
   font-size: 1.4rem;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: unset;
   transition: color 0.1s ease-out;
   
@@ -18,12 +18,17 @@ const StyledLink = styled(Link)`
   }
 `
 
-const AccountLink = ({ children, ...props }) => (
+const AccountLink = ({ url, children }) => (
   <Container data-sal="slide-up" data-sal-duration="1000">
-    <StyledLink {...props}>
+    <StyledLink href={url} target="_blank">
       {children}
     </StyledLink>
   </Container>
 )
+
+AccountLink.propTypes = {
+  url: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+}
 
 export default AccountLink

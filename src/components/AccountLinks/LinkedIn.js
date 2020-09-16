@@ -5,7 +5,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import AccountLink from "./AccountLink"
 
 const LinkedIn = ({ url }) => (
-  <AccountLink to={url}>
+  <AccountLink url={url}>
     <FontAwesomeIcon icon={faLinkedin} />
   </AccountLink>
 )

@@ -5,7 +5,7 @@ import { faStackOverflow } from "@fortawesome/free-brands-svg-icons"
 import AccountLink from "./AccountLink"
 
 const StackOverflow = ({ url }) => (
-  <AccountLink to={url}>
+  <AccountLink url={url}>
     <FontAwesomeIcon icon={faStackOverflow} />
   </AccountLink>
 )

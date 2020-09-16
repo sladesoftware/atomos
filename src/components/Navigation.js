@@ -32,6 +32,7 @@ const QUERY = graphql`
         pages {
           text
           path
+          active
         }
       }
     }
@@ -45,7 +46,9 @@ const NavBar = () => {
 
   return (
     <NavLinks>
-      {pages.map((page, index) => (
+      {pages
+        .filter(page => page.active)
+        .map((page, index) => (
         <NavItem
           key={index}
           data-sal="fade"

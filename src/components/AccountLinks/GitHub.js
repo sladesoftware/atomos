@@ -5,7 +5,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import AccountLink from "./AccountLink"
 
 const GitHub = ({ url }) => (
-  <AccountLink to={url}>
+  <AccountLink url={url}>
     <FontAwesomeIcon icon={faGithub} />
   </AccountLink>
 )

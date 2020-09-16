@@ -7,16 +7,24 @@ module.exports = {
     author: "Slade Software Ltd",
     pages: [
       {
+        text: "about",
+        path: "/about",
+        active: false
+      },
+      {
         text: "blog",
-        path: "/blog"
+        path: "/blog",
+        active: false
       },
       {
         text: "portfolio",
-        path: "/portfolio"
+        path: "/portfolio",
+        active: false
       },
       {
         text: "products",
-        path: "/products"
+        path: "/products",
+        active: false
       }
     ]
   },
