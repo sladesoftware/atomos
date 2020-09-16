@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import {
+  AccountLinks,
   CenteredLayout,
   Footer,
   Logo,
@@ -27,6 +28,7 @@ const IndexPage = () => (
         </Subtitle>
 
         <Navigation />
+        <AccountLinks />
       </Main>
 
       <Footer />
