@@ -4,15 +4,12 @@ import styled from "styled-components"
 
 const NavLinks = styled.ul`
   list-style-type: none;
+  margin: 0;
 `
 
 const NavItem = styled.li`
   display: inline-block;
   margin: 0 1rem;
-
-  &:first-child {
-    margin-left: -1rem;
-  }
 `
 
 const NavLink = styled(Link)`

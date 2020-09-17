@@ -11,7 +11,8 @@ const theme = Object.freeze({
     muted: "#999999"
   },
   footer: {
-    height: "15rem"
+    height: "15rem",
+    phoneHeight: "30rem"
   }
 });
 

@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
+import styled from "styled-components"
 
 const QUERY = graphql`
   query {
@@ -25,6 +25,8 @@ const QUERY = graphql`
 const Container = styled.div`
   text-align: left;
   font-size: 0.7rem;
+  margin: 2rem;
+  float: left;
 `
 
 const Header = styled.h5`
