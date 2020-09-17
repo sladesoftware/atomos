@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import CompanyDetails from "./CompanyDetails"
 
 const StyledFooter = styled.footer`
   position: fixed;
@@ -25,7 +26,7 @@ const Content = styled.div`
 const Footer = () => (
   <StyledFooter>
     <Content>
-      Slade Software Ltd &copy;
+      <CompanyDetails />
     </Content>
   </StyledFooter>
 )

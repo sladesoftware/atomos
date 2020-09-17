@@ -5,6 +5,17 @@ module.exports = {
     title: "Slade Software",
     description: "Making your life easier through software development consultancy and implementation services",
     author: "Slade Software Ltd",
+    company: {
+      name: "Slade Software Ltd",
+      registrationNumber: "09704854",
+      registeredAddress: {
+        street: "179 Park Lane",
+        town: "Poynton",
+        county: "Stockport",
+        country: "England",
+        postcode: "SK12 1RH"
+      }
+    },
     pages: [
       {
         text: "about",
