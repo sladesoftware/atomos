@@ -25,7 +25,7 @@ module.exports = {
       {
         text: "blog",
         path: "/blog",
-        active: false
+        active: true
       },
       {
         text: "portfolio",
