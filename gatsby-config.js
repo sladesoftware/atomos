@@ -40,6 +40,8 @@ module.exports = {
     ]
   },
   plugins: [
+    // General
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-root-import",
       options: {
@@ -49,7 +51,8 @@ module.exports = {
         styles: path.join(__dirname, "src/styles")
       }
     },
-    "gatsby-plugin-react-helmet",
+
+    // Data
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -58,12 +61,24 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-transformer-json",
+      options: {
+        typeName: ({ node }) => node.name
+      }
+    },
+
+    // Images
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: path.join(__dirname, "src/images")
       },
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+
+    // Fonts
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -71,12 +86,19 @@ module.exports = {
         path: path.join(__dirname, "static/fonts")
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+
+    // Posts
     {
-      resolve: "gatsby-transformer-json",
+      resolve: "gatsby-source-filesystem",
       options: {
-        typeName: ({ node }) => node.name
+        name: "posts",
+        path: path.join(__dirname, "posts")
+      }
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [ ".mdx", ".md" ]
       }
     }
   ],
