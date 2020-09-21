@@ -4,8 +4,13 @@ import { graphql } from "gatsby"
 
 export const query = graphql`
   query {
-    allMdx {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
       nodes {
+        id
+        excerpt(pruneLength: 250)
         frontmatter {
           title
           date
@@ -21,9 +26,9 @@ const Blog = ({ data }) => (
     <Layout>
       {data && data.allMdx.nodes.map((post, index) => (
         <div key={index}>
-          <p>Title: {post.frontmatter.title}</p>
-          <p>Date: {post.frontmatter.date}</p>
-          <p>Published: {post.frontmatter.published}</p>
+          <h1>{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
+          <p>{post.excerpt}</p>
         </div>
       ))}
     </Layout>

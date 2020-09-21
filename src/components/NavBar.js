@@ -13,6 +13,7 @@ const Nav = styled.nav`
   display: flex;
   padding: 1rem;
   align-items: center;
+  background-color: white;
 `
 
 const Logo = styled.img`
