@@ -1,6 +1,57 @@
 import React from "react"
-import { Page, Layout } from "components"
 import { graphql, Link } from "gatsby"
+import styled from "styled-components"
+import {
+  Page,
+  Layout,
+  PostCard,
+  PostCardTitle,
+  PostCardSubtitle,
+  PostCardContent,
+  PostCardActions
+} from "components"
+
+const Centered = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const Container = styled.div`
+  max-width: 800px;
+  margin: 0 2rem;
+`
+
+const Blog = ({ data }) => (
+  <Page title="Blog">
+    <Layout>
+      <Centered>
+        <Container>
+          {data && data.allMdx.nodes.map((post, index) => (
+            <PostCard key={index}>
+              {/* TODO: Image */}
+              {/* TODO: Time to read */}
+
+              <PostCardTitle text={post.frontmatter.title} />
+              <PostCardSubtitle text={post.frontmatter.date} />
+
+              <PostCardContent>
+                {post.excerpt}
+              </PostCardContent>
+
+              <PostCardActions>
+                <Link to={post.frontmatter.slug}>
+                  Read
+                </Link>
+              </PostCardActions>
+            </PostCard>
+          ))}
+        </Container>
+      </Centered>
+    </Layout>
+  </Page>
+)
+
+export default Blog
 
 export const query = graphql`
   query {
@@ -20,22 +71,3 @@ export const query = graphql`
     }
   }
 `
-
-const Blog = ({ data }) => (
-  <Page title="Blog">
-    <Layout>
-      {data && data.allMdx.nodes.map((post, index) => (
-        <div key={index}>
-          <Link to={post.frontmatter.slug}>
-            <h1>{post.frontmatter.title}</h1>
-          </Link>
-          
-          <p>{post.frontmatter.date}</p>
-          <p>{post.excerpt}</p>
-        </div>
-      ))}
-    </Layout>
-  </Page>
-)
-
-export default Blog
