@@ -11,20 +11,52 @@ const Centered = styled.div`
 
 const Container = styled.div`
   max-width: 1024px;
-  margin: 0 2rem;
+  margin: 1 2rem;
 `
+
+const Header = styled.div`
+  display: flex;
+`
+
+const ReadTime = styled.div`
+
+`
+
+const Spacer = styled.div`
+  flex-grow: 1;
+`
+
+const DatePublished = styled.div`
+`
+
+const getReadTime = readTime => {
+  if (readTime === 1) {
+    return `${readTime} minute`
+  }
+
+  return `${readTime} minutes`
+}
 
 const Template = ({ data }) => {
   const { mdx } = data
-  const { frontmatter, body } = mdx
+  const { frontmatter, body, timeToRead } = mdx
 
   return (
     <Page title={frontmatter.title}>
       <Layout>
         <Centered>
           <Container>
-            <h1>{frontmatter.title}</h1>
-            <h2>{frontmatter.date}</h2>
+            <Header>
+              <ReadTime>
+                Read time: {getReadTime(timeToRead)}
+              </ReadTime>
+
+              <Spacer />
+
+              <DatePublished>
+                {frontmatter.date}
+              </DatePublished>
+            </Header>
 
             <MDXRenderer>
               {body}
@@ -40,9 +72,9 @@ export const query = graphql`
   query($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug }}) {
       body
+      timeToRead
       frontmatter {
-        date(formatString: "DDD MMM YYYY")
-        title
+        date(formatString: "Do MMM YYYY")
       }
     }
   }
