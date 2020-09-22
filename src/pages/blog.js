@@ -1,14 +1,10 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import {
   Page,
   Layout,
-  PostCard,
-  PostCardTitle,
-  PostCardSubtitle,
-  PostCardContent,
-  PostCardActions
+  BlogPostCard
 } from "components"
 
 const Centered = styled.div`
@@ -17,7 +13,7 @@ const Centered = styled.div`
 `
 
 const Container = styled.div`
-  max-width: 800px;
+  width: 800px;
   margin: 0 2rem;
 `
 
@@ -26,24 +22,21 @@ const Blog = ({ data }) => (
     <Layout>
       <Centered>
         <Container>
+          <h2>Posts</h2>
+
           {data && data.allMdx.nodes.map((post, index) => (
-            <PostCard key={index}>
-              {/* TODO: Image */}
-              {/* TODO: Time to read */}
+            <div key={index}>
+              <BlogPostCard
+                title={post.frontmatter.title}
+                subtitle={post.frontmatter.date}
+                text={post.excerpt}
+                url={post.frontmatter.slug}
+              />
 
-              <PostCardTitle text={post.frontmatter.title} />
-              <PostCardSubtitle text={post.frontmatter.date} />
-
-              <PostCardContent>
-                {post.excerpt}
-              </PostCardContent>
-
-              <PostCardActions>
-                <Link to={post.frontmatter.slug}>
-                  Read
-                </Link>
-              </PostCardActions>
-            </PostCard>
+              {index < data.allMdx.nodes.length - 1 && (
+                <hr />
+              )}
+            </div>
           ))}
         </Container>
       </Centered>
@@ -65,7 +58,7 @@ export const query = graphql`
         frontmatter {
           slug
           title
-          date(formatString: "DDD MMM YYYY")
+          date(formatString: "Do MMM YYYY")
         }
       }
     }
