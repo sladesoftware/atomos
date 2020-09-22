@@ -30,6 +30,7 @@ const Blog = ({ data }) => (
                 title={post.frontmatter.title}
                 subtitle={post.frontmatter.date}
                 text={post.excerpt}
+                readTime={post.timeToRead}
                 url={post.frontmatter.slug}
               />
 
@@ -55,6 +56,7 @@ export const query = graphql`
       nodes {
         id
         excerpt(pruneLength: 250)
+        timeToRead
         frontmatter {
           slug
           title

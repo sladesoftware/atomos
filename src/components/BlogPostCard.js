@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEye } from "@fortawesome/free-solid-svg-icons"
 
 const Container = styled.div`
-  margin-bottom: 2rem;
+  margin: 1rem 0;
 `
 
 const TitleContainer = styled.div`
@@ -33,7 +33,15 @@ const Content = styled.p`
 `
 
 const Actions = styled.div`
-  text-align: right;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+`
+
+const ReadTime = styled.div`
+  display: inline-block;
+  font-variant: small-caps;
+  color: ${props => props.theme.colors.muted};
 `
 
 const StyledLink = styled(Link)`
@@ -44,7 +52,15 @@ const StyledLink = styled(Link)`
   }
 `
 
-const BlogPostCard = ({ title, subtitle, text, url }) => (
+const getReadTime = readTime => {
+  if (readTime === 1) {
+    return `${readTime} minute`
+  }
+
+  return `${readTime} minutes`
+}
+
+const BlogPostCard = ({ title, subtitle, text, readTime, url }) => (
   <Container>
     <TitleContainer>
       <Title>
@@ -63,6 +79,12 @@ const BlogPostCard = ({ title, subtitle, text, url }) => (
     </Content>
 
     <Actions>
+      <ReadTime>
+        {getReadTime(readTime)}
+      </ReadTime>
+
+      <Spacer />
+
       <StyledLink to={url} title="View">
         <FontAwesomeIcon icon={faEye} />
       </StyledLink>
@@ -74,6 +96,7 @@ BlogPostCard.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   text: PropTypes.string.isRequired,
+  readTime: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired
 }
 
