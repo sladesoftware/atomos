@@ -25,7 +25,12 @@ const Blog = ({ data }) => (
           <h2>Posts</h2>
 
           {data && data.allMdx.nodes.map((post, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              data-sal="slide-up"
+              data-sal-delay={index * 100}
+              data-sal-duration={500}
+            >
               <BlogPostCard
                 title={post.frontmatter.title}
                 subtitle={post.frontmatter.date}
