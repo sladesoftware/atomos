@@ -37,7 +37,7 @@ const getReadTime = readTime => {
   return `${readTime} minutes`
 }
 
-const Template = ({ data }) => {
+const BlogPost = ({ data }) => {
   const { mdx } = data
   const { frontmatter, body, timeToRead } = mdx
 
@@ -80,4 +80,4 @@ export const query = graphql`
   }
 `
 
-export default Template
+export default BlogPost
