@@ -14,6 +14,10 @@ const Subtitle = styled.h2`
   color: ${props => props.theme.colors.secondary};
 `
 
+const NavContainer = styled.div`
+  margin: 0 0 1rem 0;
+`
+
 const IndexPage = () => (
   <Page title="Home">
     <CenteredLayout>
@@ -27,7 +31,10 @@ const IndexPage = () => (
           Making your life easier
         </Subtitle>
 
-        <Navigation />
+        <NavContainer>
+          <Navigation />
+        </NavContainer>
+        
         <AccountLinks />
       </Main>
 

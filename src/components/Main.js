@@ -6,8 +6,8 @@ import { media } from "styles"
 const Container = styled.main`
   z-index: 1000;
   min-height: 480px;
+  padding: 5rem 1rem;
   background-color: white;
-  padding-bottom: 5rem;
   margin-bottom: ${props => props.theme.footer.height};
 
   ${media.phone`
