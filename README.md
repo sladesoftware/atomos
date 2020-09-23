@@ -2,6 +2,8 @@
   <img src="https://raw.githubusercontent.com/sladesoftware/atomos/master/src/images/logo-transparent.png?token=ADCBC2IAB62REIP2B43IOMS7LIZIG" />
 </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9da1dde1-5f8c-4550-aa9d-557e1e59a230/deploy-status)](https://app.netlify.com/sites/vibrant-visvesvaraya-4b4e42/deploys)
+
 # Project Atomos <img src="https://img.pngio.com/atom-icon-png-401284-free-icons-library-atomic-png-256_256.jpg" width="24" />
 Project Atomos is the repository for the company website hosted at https://www.sladesoftware.co.uk/.
 
