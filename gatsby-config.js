@@ -2,6 +2,7 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://www.sladesoftware.co.uk/",
     title: "Slade Software",
     description: "Making your life easier through software development consultancy and implementation services",
     author: "Slade Software Ltd",
@@ -99,6 +100,60 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [ ".mdx", ".md" ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-feed",
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                const tag = `${site.siteMetadata.siteUrl}${edge.node.frontmatter.slug}`
+
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: tag,
+                  guid: tag,
+                  custom_elements: [{ "content:encoded": edge.node.body }]
+                })
+              })
+            },
+            query: `
+              {
+                allMdx(
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      body
+                      frontmatter {
+                        title
+                        date
+                        slug
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/blog/rss.xml",
+            title: "Latest blog posts"
+          }
+        ]
       }
     }
   ],
