@@ -9,6 +9,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
+  align-items: flex-start;
 
   ${media.phone`
     padding-top: 40%;
