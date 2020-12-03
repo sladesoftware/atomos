@@ -1,15 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { useCompanyDetails } from "./useCompanyDetails"
+import MainFooterItem from "./MainFooterItem"
 import logo from "images/apple-touch-icon.png"
 
-const Container = styled.div`
-  max-width: 14.5rem;
-  text-align: left;
-`
-
 const Block = styled.div`
-  padding: 1rem;
+  padding: 1rem 0;
 `
 
 const LogoContainer = styled.div`
@@ -43,7 +39,7 @@ const CompanyDetails = () => {
   const address = company.registeredAddress
 
   return (
-    <Container>
+    <MainFooterItem>
       <Block>
         <LogoContainer>
           <Logo src={logo} />
@@ -74,7 +70,7 @@ const CompanyDetails = () => {
           {company.email}
         </Email>
       </Block>
-    </Container>
+    </MainFooterItem>
   )
 }
 

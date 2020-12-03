@@ -1,15 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
-
-const Container = styled.div`
-  text-align: left;
-  float: left;
-`
-
-const Header = styled.h5`
-  margin-bottom: 0.6rem;
-`
+import MainFooterItem from "./MainFooterItem"
 
 const NavLinks = styled.ul`
   list-style-type: none;
@@ -49,11 +41,7 @@ const QuickLinks = () => {
   const pages = site.siteMetadata.pages
 
   return (
-    <Container>
-      <Header>
-        Quick Links
-      </Header>
-
+    <MainFooterItem header="Quick Links">
       <NavLinks>
         {pages
           .filter(page => page.active)
@@ -65,7 +53,7 @@ const QuickLinks = () => {
           </NavItem>
         ))}
       </NavLinks>
-    </Container>
+    </MainFooterItem>
   )
 }
 
