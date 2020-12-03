@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 const StyledNavLinks = styled.ul`
   list-style-type: none;
   margin: 0;
+  overflow: hidden;
 `
 
 const NavItem = styled.li`
