@@ -12,6 +12,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${props => props.theme.fonts.main};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: ${props => props.theme.fonts.heading};

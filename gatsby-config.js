@@ -8,6 +8,7 @@ module.exports = {
     author: "Slade Software Ltd",
     company: {
       name: "Slade Software Ltd",
+      email: "samuel.slade@sladesoftware.co.uk",
       registrationNumber: "09704854",
       registeredAddress: {
         street: "179 Park Lane",

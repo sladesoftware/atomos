@@ -1,18 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { media } from "styles"
 
 const Container = styled.main`
-  z-index: 1000;
-  min-height: 480px;
+  min-height: 100vh;
   padding: 5rem 1rem;
   background-color: white;
-  margin-bottom: ${props => props.theme.footer.height};
-
-  ${media.phone`
-    margin-bottom: ${props => props.theme.footer.phoneHeight};
-  `}
+  flex: 1;
 `
 
 const Main = ({ children }) => (

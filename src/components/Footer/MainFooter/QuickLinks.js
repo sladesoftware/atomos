@@ -3,8 +3,6 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 
 const Container = styled.div`
-  margin: 2rem;
-  font-size: 0.7rem;
   text-align: left;
   float: left;
 `
@@ -24,7 +22,7 @@ const NavItem = styled.li`
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: ${props => props.theme.colors.primary};
+  color: #eee;
 
   &:hover {
     color: ${props => props.theme.colors.secondary};
