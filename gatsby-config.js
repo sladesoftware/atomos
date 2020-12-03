@@ -22,7 +22,7 @@ module.exports = {
       {
         text: "about",
         path: "/about",
-        active: false
+        active: true
       },
       {
         text: "blog",
