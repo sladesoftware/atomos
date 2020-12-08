@@ -15,6 +15,7 @@ const QUERY = graphql`
             country
             postcode
           }
+          director
         }
       }
     }

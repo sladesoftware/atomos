@@ -16,7 +16,8 @@ module.exports = {
         county: "Stockport",
         country: "England",
         postcode: "SK12 1RH"
-      }
+      },
+      director: "Samuel Slade"
     },
     pages: [
       {
