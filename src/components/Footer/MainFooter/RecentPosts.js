@@ -30,8 +30,6 @@ const RecentPosts = () => {
     text: post.frontmatter.title
   }))
 
-  console.log(posts)
-
   return (
     <MainFooterItem header="Recent Posts">
       <NavLinks links={posts} />
