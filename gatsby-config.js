@@ -51,6 +51,7 @@ module.exports = {
         components: path.join(__dirname, "src/components"),
         images: path.join(__dirname, "src/images"),
         pages: path.join(__dirname, "src/pages"),
+        sections: path.join(__dirname, "src/sections"),
         styles: path.join(__dirname, "src/styles"),
         queries: path.join(__dirname, "src/queries")
       }

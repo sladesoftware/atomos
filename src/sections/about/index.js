@@ -1,0 +1,7 @@
+export { default as AboutTheCompany } from "./AboutTheCompany"
+export { default as Blog } from "./Blog"
+export { default as CompanyPanel } from "./CompanyPanel"
+export { default as Fees } from "./Fees"
+export { default as Services } from "./Services"
+export { default as Team } from "./Team"
+export { default as Values } from "./Values"
