@@ -42,6 +42,13 @@ const MainSection = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  border-left: 1px dotted #bbb;
+  padding-left: 2rem;
+
+  ${media.phone`
+    border: none;
+    padding: 0;
+  `}
 `
 
 const Section = styled.div`
@@ -55,7 +62,7 @@ const About = () => {
       <Layout>
         <Container>
           <CompanyPanel>
-            <CircularLogo size="lg" />
+            <CircularLogo size="lg" addBorder />
 
             <CompanyName>
               {company.name}

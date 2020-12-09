@@ -8,6 +8,7 @@ const LogoContainer = styled.div`
   width: ${props => props.width}px;
   height: ${props => props.height}px;
   overflow: hidden;
+  border: ${props => props.addBorder ? `1px dashed orange` : `none`};
   border-radius: 50%;
 `
 
@@ -24,31 +25,37 @@ function getLogoSize(size) {
       return 24
 
     case "lg":
-      return 72
+      return 128
 
     default:
       return 48
   }
 }
 
-const CircularLogo = ({ size }) => {
+const CircularLogo = ({ size, addBorder }) => {
   const value = getLogoSize(size)
 
   return (
-    <LogoContainer width={value} height={value}>
+    <LogoContainer
+      width={value}
+      height={value}
+      addBorder={addBorder}
+    >
       <Logo alt="Slade Software Ltd" src={logo} />
     </LogoContainer>
   )
 }
 
-CircularLogo.defaultPropTypes = {
-  size: "md"
+CircularLogo.defaultProps = {
+  size: "md",
+  addBorder: false
 }
 
 CircularLogo.propTypes = {
   size: PropTypes.oneOf([
     "sm", "md", "lg"
-  ])
+  ]),
+  addBorder: PropTypes.bool
 }
 
 export default CircularLogo
