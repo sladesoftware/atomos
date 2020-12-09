@@ -10,6 +10,7 @@ const SocialLinks = styled.div`
   border-top: 1px #777 solid;
   padding-top: 1.25rem;
   color: #fff;
+  text-align: center;
 `
 
 const SocialFooter = () => (
