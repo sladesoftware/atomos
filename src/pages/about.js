@@ -5,9 +5,10 @@ import { Header, Paragraph } from "components/typography"
 import { useCompanyDetails } from "queries"
 import { media } from "styles"
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   flex-direction: row;
+  margin-top: 2rem;
   padding: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,6 +44,9 @@ const MainSection = styled.div`
   flex: 1;
 `
 
+const Section = styled.div`
+`
+
 const About = () => {
   const company = useCompanyDetails()
 
@@ -67,17 +71,69 @@ const About = () => {
           </CompanyPanel>
 
           <MainSection>
-            <Header>
-              {`About`}
-            </Header>
+            <Section>
+              <Header anchorId="company" offset>
+                {`About the company`}
+              </Header>
 
-            <Paragraph alignment="justify">
-              {`${company.name} is a privately owned company directed by ${company.director},
-              Independent Consultant, offering Software Development and Consultancy services.
-              We cover many areas, from discovery and analysis of requirements, architecture design,
-              technology research and development, product prototyping, application development, and
-              team upskilling; just to name a few.`}
-            </Paragraph>
+              <Paragraph alignment="justify">
+                {`${company.name} is a privately owned company directed by ${company.director},
+                Independent Consultant, offering Software Development and Consultancy services through
+                technical leadership. We cover many areas, from discovery and analysis of requirements,
+                architecture design, technology research and development, product prototyping,
+                application development, and team upskilling; just to name a few.`}
+              </Paragraph>
+            </Section>
+
+            <Section>
+              <Header anchorId="services" offset>
+                {`Services`}
+              </Header>
+
+              <Paragraph alignment="justify">
+                {`TODO: Talk about services`}
+              </Paragraph>
+            </Section>
+
+            <Section>
+              <Header anchorId="fees" offset>
+                {`Fees`}
+              </Header>
+
+              <Paragraph alignment="justify">
+                {`TODO: Give a brief overview of fees and link to the actual page`}
+              </Paragraph>
+            </Section>
+
+            <Section>
+              <Header anchorId="blog" offset>
+                {`Blog`}
+              </Header>
+
+              <Paragraph alignment="justify">
+                {`TODO: Reference the blog - maybe this shouldn't be a section, per se`}
+              </Paragraph>
+            </Section>
+
+            <Section>
+              <Header anchorId="team" offset>
+                {`Meet the team`}
+              </Header>
+
+              <Paragraph alignment="justify">
+                {`TODO: Talk about the "team" - i.e. Samuel Slade, Director. Maybe don't call it "team"`}
+              </Paragraph>
+            </Section>
+
+            <Section>
+              <Header anchorId="values" offset>
+                {`Our values`}
+              </Header>
+
+              <Paragraph alignment="justify">
+                {`TODO: Talk about our values - namely that we aim to not outsource`}
+              </Paragraph>
+            </Section>
           </MainSection>
         </Container>
       </Layout>
