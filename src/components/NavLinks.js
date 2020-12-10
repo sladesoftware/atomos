@@ -15,18 +15,18 @@ const NavItem = styled.li`
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: #eee;
+  color: ${props => props.color};
 
   &:hover {
     color: ${props => props.theme.colors.secondary};
   }
 `
 
-const NavLinks = ({ links }) => (
+const NavLinks = ({ links, linkColor }) => (
   <StyledNavLinks>
     {links.map((link, index) => (
       <NavItem key={index}>
-        <NavLink to={link.path}>
+        <NavLink to={link.path} color={linkColor}>
           {link.text}
         </NavLink>
       </NavItem>
@@ -34,11 +34,16 @@ const NavLinks = ({ links }) => (
   </StyledNavLinks>
 )
 
+NavLinks.defaultProps = {
+  linkColor: "#eee"
+}
+
 NavLinks.propTypes = {
   links: PropTypes.shape({
     path: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  linkColor: PropTypes.string
 }
 
 export default NavLinks

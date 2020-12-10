@@ -1,16 +1,29 @@
 import React from "react"
+import styled from "styled-components"
+import { NavLinks } from "components"
 import { Header, Paragraph } from "components/typography"
+import { useRecentPosts } from "queries"
 
-const Blog = () => (
-  <div>
-    <Header anchorId="blog" offset>
-      {`Blog`}
-    </Header>
+const Container = styled.div`
+  margin-bottom: 2rem;
+`
 
-    <Paragraph alignment="justify">
-      {`TODO: Reference the blog - maybe this shouldn't be a section, per se`}
-    </Paragraph>
-  </div>
-)
+const Blog = () => {
+  const posts = useRecentPosts()
+
+  return (
+    <Container>
+      <Header anchorId="blog" offset>
+        {`Blog`}
+      </Header>
+
+      <Paragraph alignment="justify">
+        {`Take a look at our recent posts on our blog.`}
+      </Paragraph>
+
+      <NavLinks links={posts} linkColor="#000" />
+    </Container>
+  )
+}
 
 export default Blog
