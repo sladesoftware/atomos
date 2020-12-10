@@ -8,7 +8,13 @@ const Values = () => (
     </Header>
 
     <Paragraph alignment="justify">
-      {`TODO: Talk about our values - namely that we aim to not outsource`}
+      {`At Slade Software, we have a few core values that we believe are fundamental
+      in running a successful and reputable business, and maintaining happy customers.
+      Top of that list is to provide a personal service to all of our customers. We aim
+      to never outsource any significant work, as we believe the personal touch is what
+      sets us apart from the rest. That way, we can always ensure that the services we
+      deliver are up to the high standard we hold, as well as meet the requirements
+      and expectations of the customers.`}
     </Paragraph>
   </div>
 )
