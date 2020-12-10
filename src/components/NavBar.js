@@ -14,6 +14,7 @@ const Nav = styled.nav`
   padding: 1rem;
   align-items: center;
   background-color: white;
+  z-index: 1000;
 `
 
 const Logo = styled.img`
