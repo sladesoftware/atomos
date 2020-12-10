@@ -10,12 +10,8 @@ const AboutUs = () => (
         text: "company"
       },
       {
-        path: "/about#services",
-        text: "services"
-      },
-      {
-        path: "/about#fees",
-        text: "fees"
+        path: "/about#services-and-fees",
+        text: "services and fees"
       },
       {
         path: "/about#blog",

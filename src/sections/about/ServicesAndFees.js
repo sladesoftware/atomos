@@ -1,10 +1,10 @@
 import React from "react"
 import { Header, Paragraph } from "components/typography"
 
-const Services = () => (
+const ServicesAndFees = () => (
   <div>
-    <Header anchorId="services" offset>
-      {`Services`}
+    <Header anchorId="services-and-fees" offset>
+      {`Services and Fees`}
     </Header>
 
     <Paragraph alignment="justify">
@@ -13,4 +13,4 @@ const Services = () => (
   </div>
 )
 
-export default Services
+export default ServicesAndFees

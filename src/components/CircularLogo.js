@@ -8,7 +8,7 @@ const LogoContainer = styled.div`
   width: ${props => props.width}px;
   height: ${props => props.height}px;
   overflow: hidden;
-  border: ${props => props.addBorder ? `1px dashed orange` : `none`};
+  border: ${props => props.addBorder ? `1px dashed ${props.theme.colors.secondary}` : `none`};
   border-radius: 50%;
 `
 

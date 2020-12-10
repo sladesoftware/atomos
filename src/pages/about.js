@@ -5,8 +5,7 @@ import { media } from "styles"
 import {
   CompanyPanel,
   AboutTheCompany,
-  Services,
-  Fees,
+  ServicesAndFees,
   Blog,
   Team,
   Values
@@ -33,7 +32,7 @@ const MainSection = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  border-left: 1px dotted #bbb;
+  border-left: 1px dotted ${props => props.theme.colors.primary};
   padding-left: 2rem;
 
   ${media.phone`
@@ -52,8 +51,7 @@ const About = () => (
 
         <MainSection>
           <AboutTheCompany />
-          <Services />
-          <Fees />
+          <ServicesAndFees />
           <Blog />
           <Team />
           <Values />
