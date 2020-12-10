@@ -1,26 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { useCompanyDetails } from "./useCompanyDetails"
+import { CircularLogo } from "components"
+import { useCompanyDetails } from "queries"
 import MainFooterItem from "./MainFooterItem"
-import logo from "images/apple-touch-icon.png"
 
 const Block = styled.div`
   padding: 1rem 0;
-`
-
-const LogoContainer = styled.div`
-  position: relative;
-  width: 48px;
-  height: 48px;
-  overflow: hidden;
-  border-radius: 50%;
-`
-
-const Logo = styled.img`
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
 `
 
 const CompanyName = styled.div`
@@ -41,9 +26,7 @@ const CompanyDetails = () => {
   return (
     <MainFooterItem>
       <Block>
-        <LogoContainer>
-          <Logo src={logo} />
-        </LogoContainer>
+        <CircularLogo size="md" />
       </Block>
 
       <Block>

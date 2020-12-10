@@ -6,8 +6,24 @@ const AboutUs = () => (
   <MainFooterItem header="About">
     <NavLinks links={[
       {
-        path: "/about",
-        text: "about"
+        path: "/about#company",
+        text: "company"
+      },
+      {
+        path: "/about#services-and-fees",
+        text: "services and fees"
+      },
+      {
+        path: "/about#blog",
+        text: "blog"
+      },
+      {
+        path: "/about#team",
+        text: "team"
+      },
+      {
+        path: "/about#values",
+        text: "values"
       }
     ]} />
   </MainFooterItem>
