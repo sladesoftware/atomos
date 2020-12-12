@@ -26,3 +26,4 @@ Samuel Slade, Independent Consultant of Slade Software Ltd
 
 ## Copyright
 All rights are retained by Slade Software Ltd. This project can be viewed and downloaded, but no rights are granted to duplicate, distribute or commercialize any part of this site.
+
