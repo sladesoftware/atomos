@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import logo from "images/apple-touch-icon.png"
 
 const LogoContainer = styled.div`
   position: relative;
@@ -32,7 +31,7 @@ function getLogoSize(size) {
   }
 }
 
-const CircularLogo = ({ size, addBorder }) => {
+const CircularImage = ({ size, addBorder, image }) => {
   const value = getLogoSize(size)
 
   return (
@@ -41,21 +40,22 @@ const CircularLogo = ({ size, addBorder }) => {
       height={value}
       addBorder={addBorder}
     >
-      <Logo alt="Slade Software Ltd" src={logo} />
+      <Logo alt="Slade Software Ltd" src={image} />
     </LogoContainer>
   )
 }
 
-CircularLogo.defaultProps = {
+CircularImage.defaultProps = {
   size: "md",
   addBorder: false
 }
 
-CircularLogo.propTypes = {
+CircularImage.propTypes = {
   size: PropTypes.oneOf([
     "sm", "md", "lg"
   ]),
-  addBorder: PropTypes.bool
+  addBorder: PropTypes.bool,
+  image: PropTypes.node.isRequired
 }
 
-export default CircularLogo
+export default CircularImage

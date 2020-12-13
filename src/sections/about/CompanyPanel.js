@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { CircularLogo } from "components"
 import { useCompanyDetails } from "queries"
+import CompanyDirectorImage from "./CompanyDirectorImage"
 
 const Container = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ const CompanyPanel = () => {
 
   return (
     <Container>
-      <CircularLogo size="lg" addBorder />
+      <CompanyDirectorImage />
 
       <CompanyName>
         {company.name}

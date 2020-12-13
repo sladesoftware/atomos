@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { CircularLogo } from "components"
+import { CircularImage } from "components"
 import { useCompanyDetails } from "queries"
 import MainFooterItem from "./MainFooterItem"
+import logo from "images/apple-touch-icon.png"
 
 const Block = styled.div`
   padding: 1rem 0;
@@ -26,7 +27,7 @@ const CompanyDetails = () => {
   return (
     <MainFooterItem>
       <Block>
-        <CircularLogo size="md" />
+        <CircularImage size="md" image={logo} />
       </Block>
 
       <Block>

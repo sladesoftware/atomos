@@ -1,7 +1,7 @@
 export * from "./AccountLinks"
 export { default as BlogPostCard } from "./BlogPostCard"
 export { default as CenteredLayout } from "./CenteredLayout"
-export { default as CircularLogo } from "./CircularLogo"
+export { default as CircularImage } from "./CircularImage"
 export * from "./Footer"
 export { default as Logo } from "./Logo"
 export { default as Layout } from "./Layout"
