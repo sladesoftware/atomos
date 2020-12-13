@@ -14,7 +14,7 @@ const Values = () => (
       on a small number of clients at one time so that I can build close relationships with them and
       really focus my efforts. I also aim to never outsource any significant work, as I believe the
       personal touch is what sets me apart from the rest. That way, I can always ensure that the services I
-      deliver are up to the high standard that I hold, as well as meet the requirements
+      deliver are up to the high standards that I hold, as well as meet the requirements
       and expectations of my clients.`}
     </Paragraph>
   </div>

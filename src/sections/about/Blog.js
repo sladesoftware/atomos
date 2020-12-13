@@ -18,7 +18,8 @@ const Blog = () => {
       </Header>
 
       <Paragraph>
-        {`Take a look at my recent posts on my blog.`}
+        {`For a little further insight into some of the work that I do, have a look
+        at some of my more recent posts on my blog.`}
       </Paragraph>
 
       <NavLinks links={posts} showBullet />
