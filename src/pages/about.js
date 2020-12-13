@@ -7,7 +7,6 @@ import {
   AboutTheCompany,
   ServicesAndFees,
   Blog,
-  Team,
   Values
 } from "sections/about"
 
@@ -51,10 +50,9 @@ const About = () => (
 
         <MainSection>
           <AboutTheCompany />
+          <Values />
           <ServicesAndFees />
           <Blog />
-          <Team />
-          <Values />
         </MainSection>
       </Container>
     </Layout>

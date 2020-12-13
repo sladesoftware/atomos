@@ -8,15 +8,31 @@ const AboutTheCompany = () => {
   return (
     <div>
       <Header anchorId="company" offset>
-        {`About the company`}
+        {`Myself and the company`}
       </Header>
 
-      <Paragraph alignment="justify">
-        {`${company.name} is a privately owned company directed by ${company.director},
-        Independent Consultant, offering Software Development and Consultancy services through
-        technical leadership. We cover many areas, from discovery and analysis of requirements,
-        architecture design, technology research and development, product prototyping,
-        application development, and team upskilling; just to name a few.`}
+      <Paragraph>
+        {`${company.name} is the registered name of my business; through which
+        I provide Software Development and Consultancy services. I cover all aspectrs
+        of Software Development, but I am most interested in supporting and
+        guiding clients through all areas.`}
+      </Paragraph>
+
+      <Paragraph>
+        {`I am a husband-to-be, father and passionate technologist. I am passionate about
+        what I do in all aspects of my life, and I strive for the best. Throughout my life
+        I have worked hard to achieve a number of goals, such as attaining a First Class Degree
+        with Honours from Univeristy, starting my own business, and becoming a member of Mensa
+        in 2018. But none of these compare to my more personal achievements: becoming a father
+        (twice) and getting engaged.`}
+      </Paragraph>
+
+      <Paragraph>
+        {`Through this business, I strive to build and maintain close relationships with my
+        clients, so that I can fully understand their business and what they both need and want,
+        so I can tailor my service to fit them best. I can adjust my working practices to best
+        fit the client, whether that be to simply sit in as an advisor, or drive forward their
+        technical excellence and quality products.`}
       </Paragraph>
     </div>
   )
