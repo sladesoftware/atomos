@@ -9,13 +9,13 @@ const Values = () => (
 
     <Paragraph>
       {`As this is my personal business, I have a few core values that I believe are fundamental
-      in running a successful and reputable company, and maintaining satisfied clients.
-      Top of that list is to provide a personal service to all of my clients. As such, I only take
-      on a small number of clients at one time so that I can build close relationships with them and
-      really focus my efforts. I also aim to never outsource any significant work, as I believe the
-      personal touch is what sets me apart from the rest. That way, I can always ensure that the services I
-      deliver are up to the high standards that I hold, as well as meet the requirements
-      and expectations of my clients.`}
+      in running a successful and reputable company, in order to provide a service that you will be happy with.
+      Top of that list is to provide a personal service to you, which means that you will work with me
+      directly throughout. While I may choose to outsource some small areas of the work, I will be there
+      every step of the way, through regular communication, to ensure that the service I am delivering
+      is exactly what you need and that you are happy with the quality that I am delivering. Because of this
+      personal approach, I only have capacity to work with a small number of clients at one time, so that I can
+      build a close relationships with you and really focus my efforts.`}
     </Paragraph>
   </div>
 )

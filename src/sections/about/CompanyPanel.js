@@ -34,7 +34,7 @@ const CompanyPanel = () => {
       </CompanyName>
 
       <CompanyDescription>
-        {`Software Development Consultancy`}
+        {`Software Development and Consultancy`}
       </CompanyDescription>
 
       <CompanyTagline>

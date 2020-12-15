@@ -13,9 +13,9 @@ const ServicesAndFees = () => (
     </Paragraph>
 
     <ul>
-      <li>Ad hoc work - hourly/daily rate</li>
-      <li>Advisory work - retainer-based</li>
-      <li>Project work - value/delivery-based fixed fee</li>
+      <li>{`Ad hoc work - hourly/daily rate`}</li>
+      <li>{`Advisory work - retainer-based`}</li>
+      <li>{`Project work - value/delivery-based fixed fee`}</li>
     </ul>
 
     <Paragraph>
