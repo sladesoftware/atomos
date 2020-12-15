@@ -8,6 +8,14 @@ const AboutTheCompany = () => (
     </Header>
 
     <Paragraph>
+      {`Through this business, I will strive to build and maintain close relationships with you,
+      so that I can fully understand your business and what you both need and want in your products.
+      That way, I can tailor my services to fit you best and I can adjust my working practices to best
+      fit the you; whether that be to simply sit in as an advisor, or drive forward your technical
+      excellence and product quality.`}
+    </Paragraph>
+
+    <Paragraph>
       {`I founded Slade Software to provide bespoke Software Development and Consultancy
         services built around you. Covering all aspects of software development, from
         product inception and architecture design to application development and cloud
@@ -22,14 +30,6 @@ const AboutTheCompany = () => (
         with Honours from University, starting my own business, and becoming a member of Mensa
         in 2019. But none of these compare to my more personal achievements of becoming a father
         (twice) and getting engaged.`}
-    </Paragraph>
-
-    <Paragraph>
-      {`Through this business, I will strive to build and maintain close relationships with you,
-        so that I can fully understand your business and what you both need and want in your products.
-        That way, I can tailor my services to fit you best and I can adjust my working practices to best
-        fit the you; whether that be to simply sit in as an advisor, or drive forward your technical
-        excellence and product quality.`}
     </Paragraph>
   </div>
 )
