@@ -17,11 +17,12 @@ const Blog = () => {
         {`Blog`}
       </Header>
 
-      <Paragraph alignment="justify">
-        {`Take a look at our recent posts on our blog.`}
+      <Paragraph>
+        {`For a little further insight into some of the work that I do, have a look
+        at some of my more recent posts on my blog.`}
       </Paragraph>
 
-      <NavLinks links={posts} linkColor="#000" />
+      <NavLinks links={posts} showBullet />
     </Container>
   )
 }

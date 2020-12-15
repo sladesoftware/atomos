@@ -7,19 +7,19 @@ const ServicesAndFees = () => (
       {`Services and fees`}
     </Header>
 
-    <Paragraph alignment="justify">
-      {`Our services are structured into 3 main areas and our fees are calculated
+    <Paragraph>
+      {`My services are structured into 3 main areas and the fees are calculated
       differently for each.`}
     </Paragraph>
 
     <ul>
-      <li>Ad hoc work - hourly/daily rate</li>
-      <li>Advisory work - retainer</li>
-      <li>Project work - value/delivery-based fixed fee</li>
+      <li>{`Ad hoc work - hourly/daily rate`}</li>
+      <li>{`Advisory work - retainer-based`}</li>
+      <li>{`Project work - value/delivery-based fixed fee`}</li>
     </ul>
 
-    <Paragraph alignment="justify">
-      {`Take a look at our Services and Fees pages for more information.`}
+    <Paragraph>
+      {`Take a look at the Services and Fees pages for more information.`}
     </Paragraph>
   </div>
 )

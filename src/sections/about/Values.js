@@ -4,17 +4,18 @@ import { Header, Paragraph } from "components/typography"
 const Values = () => (
   <div>
     <Header anchorId="values" offset>
-      {`Our values`}
+      {`My values`}
     </Header>
 
-    <Paragraph alignment="justify">
-      {`At Slade Software, we have a few core values that we believe are fundamental
-      in running a successful and reputable business, and maintaining happy customers.
-      Top of that list is to provide a personal service to all of our customers. We aim
-      to never outsource any significant work, as we believe the personal touch is what
-      sets us apart from the rest. That way, we can always ensure that the services we
-      deliver are up to the high standard we hold, as well as meet the requirements
-      and expectations of the customers.`}
+    <Paragraph>
+      {`As this is my personal business, I have a few core values that I believe are fundamental
+      in running a successful and reputable company, in order to provide a service that you will be happy with.
+      Top of that list is to provide a personal service to you, which means that you will work with me
+      directly throughout. While I may choose to outsource some small areas of the work, I will be there
+      every step of the way, through regular communication, to ensure that the service I am delivering
+      is exactly what you need and that you are happy with the quality that I am delivering. Because of this
+      personal approach, I only have capacity to work with a small number of clients at one time, so that I can
+      build a close relationships with you and really focus my efforts.`}
     </Paragraph>
   </div>
 )

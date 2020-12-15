@@ -10,6 +10,10 @@ const AboutUs = () => (
         text: "company"
       },
       {
+        path: "/about#values",
+        text: "values"
+      },
+      {
         path: "/about#services-and-fees",
         text: "services and fees"
       },
@@ -17,14 +21,6 @@ const AboutUs = () => (
         path: "/about#blog",
         text: "blog"
       },
-      {
-        path: "/about#team",
-        text: "team"
-      },
-      {
-        path: "/about#values",
-        text: "values"
-      }
     ]} />
   </MainFooterItem>
 )

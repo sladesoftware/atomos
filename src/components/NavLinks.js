@@ -4,26 +4,31 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const StyledNavLinks = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
+  ${props => !props.showBullet && `
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+
+    & > li {
+      margin: 0;
+    }
+  `}
 `
 
 const NavItem = styled.li`
-  margin: 0;
 `
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: ${props => props.color};
+  color: ${props => props.color ?? props.theme.colors.primary};
 
   &:hover {
     color: ${props => props.theme.colors.secondary};
   }
 `
 
-const NavLinks = ({ links, linkColor }) => (
-  <StyledNavLinks>
+const NavLinks = ({ links, linkColor, showBullet }) => (
+  <StyledNavLinks showBullet={showBullet}>
     {links.map((link, index) => (
       <NavItem key={index}>
         <NavLink to={link.path} color={linkColor}>
@@ -35,7 +40,7 @@ const NavLinks = ({ links, linkColor }) => (
 )
 
 NavLinks.defaultProps = {
-  linkColor: "#eee"
+  showBullet: false
 }
 
 NavLinks.propTypes = {
@@ -43,7 +48,8 @@ NavLinks.propTypes = {
     path: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
   }).isRequired,
-  linkColor: PropTypes.string
+  linkColor: PropTypes.string,
+  showBullet: PropTypes.bool
 }
 
 export default NavLinks
