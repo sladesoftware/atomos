@@ -11,7 +11,7 @@ const Centered = styled.div`
 
 const Container = styled.div`
   max-width: 1024px;
-  margin: 1 2rem;
+  margin: 2rem;
 `
 
 const Header = styled.div`
