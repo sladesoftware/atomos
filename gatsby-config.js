@@ -26,8 +26,8 @@ module.exports = {
         active: true
       },
       {
-        text: "blog",
-        path: "/blog",
+        text: "services",
+        path: "/services",
         active: true
       },
       {
@@ -39,6 +39,11 @@ module.exports = {
         text: "products",
         path: "/products",
         active: false
+      },
+      {
+        text: "blog",
+        path: "/blog",
+        active: true
       }
     ]
   },

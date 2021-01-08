@@ -1,0 +1,46 @@
+{
+  "description": "Lorem Ipsum",
+  "services": [
+    {
+      "title": "Ad Hoc",
+      "features": [
+        "Bug fixing",
+        "Small feature implementation",
+        "Technology research",
+        "Prototyping"
+      ],
+      "mainCharge": {
+        "rate": 600,
+        "unit": "day"
+      },
+      "secondaryCharge": {
+        "rate": 85,
+        "unit": "hour"
+      }
+    },
+    {
+      "title": "Retainer",
+      "features": [
+        "Email access",
+        "Phone access",
+        "Meeting attendance",
+        "Technical advice",
+        "Strategy advice"
+      ],
+      "mainCharge": {
+        "rate": 3000,
+        "unit": "month"
+      }
+    },
+    {
+      "title": "Projects",
+      "features": [
+        "Application development",
+        "CI/CD pipelines",
+        "Cloud infrastructure",
+        "Custom test frameworks",
+        "Architecture design"
+      ]
+    }
+  ]
+}
