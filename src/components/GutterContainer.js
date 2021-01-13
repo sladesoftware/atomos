@@ -9,6 +9,7 @@ const Container = styled.div`
 `
 
 const ChildContainer = styled.div`
+  width: 100%;
   max-width: 70rem;
   padding: 0 2rem;
 `

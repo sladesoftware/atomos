@@ -10,7 +10,7 @@ const LegalBlock = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
 `
 
 const LegalContent = styled.div`

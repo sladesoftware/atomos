@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Page, Layout } from "components"
+import { Page, Layout, GutterContainer } from "components"
 import { media } from "styles"
 import {
   CompanyPanel,
@@ -43,18 +43,20 @@ const MainSection = styled.div`
 const About = () => (
   <Page title="About">
     <Layout>
-      <Container>
-        <CompanyPanelContainer>
-          <CompanyPanel />
-        </CompanyPanelContainer>
+      <GutterContainer>
+        <Container>
+          <CompanyPanelContainer>
+            <CompanyPanel />
+          </CompanyPanelContainer>
 
-        <MainSection>
-          <AboutTheCompany />
-          <Values />
-          <ServicesAndFees />
-          <Blog />
-        </MainSection>
-      </Container>
+          <MainSection>
+            <AboutTheCompany />
+            <Values />
+            <ServicesAndFees />
+            <Blog />
+          </MainSection>
+        </Container>
+      </GutterContainer>
     </Layout>
   </Page>
 )

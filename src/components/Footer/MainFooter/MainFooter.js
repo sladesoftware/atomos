@@ -5,17 +5,17 @@ import CompanyDetails from "./CompanyDetails"
 import QuickLinks from "./QuickLinks"
 import AboutUs from "./AboutUs"
 import RecentPosts from "./RecentPosts"
+import GutterContainer from "../../GutterContainer"
 
 const NavigationFooter = styled.section`
   padding: 1.25rem 1.875rem;
+  color: #eee;
+`
+
+const InnerContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  color: #eee;
-  justify-content: space-evenly;
-
-  ${media.tablet`
-    justify-content: space-between;
-  `}
+  justify-content: space-between;
 
   ${media.phone`
     justify-content: none;
@@ -24,10 +24,14 @@ const NavigationFooter = styled.section`
 
 const MainFooter = () => (
   <NavigationFooter>
-    <CompanyDetails />
-    <QuickLinks />
-    <AboutUs />
-    <RecentPosts />
+    <GutterContainer>
+      <InnerContainer>
+        <CompanyDetails />
+        <QuickLinks />
+        <AboutUs />
+        <RecentPosts />
+      </InnerContainer>
+    </GutterContainer>
   </NavigationFooter>
 )
 

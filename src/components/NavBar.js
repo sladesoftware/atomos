@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import GutterContainer from "./GutterContainer"
 import Navigation from "./Navigation"
 import { AccountLinks } from "./AccountLinks"
 import logo from "images/logo-transparent.png"
@@ -10,11 +11,16 @@ const Nav = styled.nav`
   left: 0;
   right: 0;
   top: 0;
-  display: flex;
   padding: 1rem;
-  align-items: center;
   background-color: white;
   z-index: 1000;
+`
+
+const InnerContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const Logo = styled.img`
@@ -28,13 +34,17 @@ const Spacer = styled.div`
 
 const NavBar = () => (
   <Nav>
-    <Link to="/">
-      <Logo src={logo} alt="Slade Software Ltd" />
-    </Link>
+    <GutterContainer>
+      <InnerContainer>
+        <Link to="/">
+          <Logo src={logo} alt="Slade Software Ltd" />
+        </Link>
 
-    <Spacer />
-    <Navigation />
-    <AccountLinks />
+        <Spacer />
+        <Navigation />
+        <AccountLinks />
+      </InnerContainer>
+    </GutterContainer>
   </Nav>
 )
 
