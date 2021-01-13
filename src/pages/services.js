@@ -7,21 +7,30 @@ const Container = styled.div`
   margin-top: 2rem;
 `
 
+const ServicesContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`
+
 const Services = ({ data: { services } }) => (
   <Page title="Work with me">
     <Layout>
       <Container>
         {services.description}
 
-        {services.services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            title={service.title}
-            features={service.features || []}
-            mainCharge={service.mainCharge}
-            secondaryCharge={service.secondaryCharge}
-          />
-        ))}
+        <ServicesContainer>
+          {services.services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              features={service.features || []}
+              mainCharge={service.mainCharge}
+              secondaryCharge={service.secondaryCharge}
+            />
+          ))}
+        </ServicesContainer>
       </Container>
     </Layout>
   </Page>

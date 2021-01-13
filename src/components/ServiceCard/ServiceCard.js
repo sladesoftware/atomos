@@ -1,21 +1,33 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import CardTitle from "./CardTitle"
 import Features from "./Features"
 import Charge from "./Charge"
 import GetInTouch from "./GetInTouch"
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin: 1rem;
+  width: 20rem;
+`
+
 const ServiceCard = ({ title, features, mainCharge, secondaryCharge }) => (
-  <div>
+  <Container>
     <CardTitle title={title} />
     <Features features={features} />
-    <Charge charge={mainCharge} type="primary" />
-    <Charge charge={secondaryCharge} type="secondary" />
+    <Charge
+      mainCharge={mainCharge}
+      secondaryCharge={secondaryCharge}
+    />
 
     {!mainCharge && !secondaryCharge && (
       <GetInTouch />
     )}
-  </div>
+  </Container>
 )
 
 ServiceCard.propTypes = {
