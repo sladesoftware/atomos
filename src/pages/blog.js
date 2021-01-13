@@ -3,7 +3,9 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import {
   Page,
+  PageHeader,
   Layout,
+  GutterContainer,
   BlogPostCard
 } from "components"
 
@@ -12,17 +14,14 @@ const Centered = styled.div`
   justify-content: center;
 `
 
-const Container = styled.div`
-  width: 800px;
-  margin: 0 2rem;
-`
-
 const Blog = ({ data }) => (
   <Page title="Blog">
     <Layout>
       <Centered>
-        <Container>
-          <h2>Posts</h2>
+        <GutterContainer>
+          <PageHeader>
+            {`Posts`}
+          </PageHeader>
 
           {data && data.allMdx.nodes.map((post, index) => (
             <div
@@ -44,7 +43,7 @@ const Blog = ({ data }) => (
               )}
             </div>
           ))}
-        </Container>
+        </GutterContainer>
       </Centered>
     </Layout>
   </Page>

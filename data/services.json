@@ -1,5 +1,13 @@
 {
-  "description": "Lorem Ipsum",
+  "description": [
+    "Maybe you're looking for a guiding hand. Maybe you need a bespoke software or web application building.",
+    "Or maybe you just need a little bit of support catching up on your work load or bringing some stability",
+    "to your codebase. Whatever your requirements, let's work together to meet your needs and help your",
+    "business flourish!\nAs an individual experienced in the software industry, with an aptitude for",
+    "business and an eye for the best possible user experiences; I can help you achieve your goals. I will",
+    "work closely with you to identify exactly what you need, or help you to understand this yourself if you're",
+    "unsure. I can then work to deliver these factors for you, so that you can focus on what it is you do best!"
+  ],
   "services": [
     {
       "title": "Ad Hoc",

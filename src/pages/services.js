@@ -1,22 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { Page, Layout, ServiceCard } from "components"
+import {
+  Page,
+  PageHeader,
+  Layout,
+  ServiceCard,
+  GutterContainer
+} from "components"
 
 const Container = styled.div`
   margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 `
 
 const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`
-
-const Description = styled.p`
 `
 
 const ServicesContainer = styled.div`
@@ -26,27 +26,38 @@ const ServicesContainer = styled.div`
   justify-content: center;
 `
 
+const getDescriptionParagraphs = description =>
+  description.join(" ").split("\n")
+
 const Services = ({ data: { services } }) => (
   <Page title="Work with me">
     <Layout>
       <Container>
-        <InnerContainer>
-          <Description>
-            {services.description}
-          </Description>
+        <GutterContainer>
+          <InnerContainer>
+            <PageHeader>
+              {`Work with me`}
+            </PageHeader>
 
-          <ServicesContainer>
-            {services.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                features={service.features || []}
-                mainCharge={service.mainCharge}
-                secondaryCharge={service.secondaryCharge}
-              />
+            {getDescriptionParagraphs(services.description).map((description, index) => (
+              <p key={index}>
+                {description}
+              </p>
             ))}
-          </ServicesContainer>
-        </InnerContainer>
+
+            <ServicesContainer>
+              {services.services.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  title={service.title}
+                  features={service.features || []}
+                  mainCharge={service.mainCharge}
+                  secondaryCharge={service.secondaryCharge}
+                />
+              ))}
+            </ServicesContainer>
+          </InnerContainer>
+        </GutterContainer>
       </Container>
     </Layout>
   </Page>
