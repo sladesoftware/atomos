@@ -8,6 +8,7 @@ import {
   ServiceCard,
   GutterContainer
 } from "components"
+import { CallToAction } from "sections/services"
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -56,6 +57,8 @@ const Services = ({ data: { services } }) => (
                 />
               ))}
             </ServicesContainer>
+
+            <CallToAction />
           </InnerContainer>
         </GutterContainer>
       </Container>
