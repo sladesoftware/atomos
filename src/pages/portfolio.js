@@ -1,12 +1,17 @@
 import React from "react"
-import { Page, PageHeader, Layout } from "components"
+import { Page, PageHeader, Layout, GutterContainer } from "components"
+import { PortfolioCard } from "sections/portfolio"
 
 const Portfolio = () => (
   <Page title="Portfolio">
     <Layout>
-      <PageHeader>
-        {`Portfolio`}
-      </PageHeader>
+      <GutterContainer>
+        <PageHeader>
+          {`Portfolio`}
+        </PageHeader>
+
+        <PortfolioCard />
+      </GutterContainer>
     </Layout>
   </Page>
 )
