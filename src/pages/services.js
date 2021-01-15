@@ -9,10 +9,6 @@ import {
 } from "components"
 import { CallToAction, ServiceCard } from "sections/services"
 
-const Container = styled.div`
-  margin-top: 2rem;
-`
-
 const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,35 +28,33 @@ const getDescriptionParagraphs = description =>
 const Services = ({ data: { services } }) => (
   <Page title="Work with me">
     <Layout>
-      <Container>
-        <GutterContainer>
-          <InnerContainer>
-            <PageHeader>
-              {`Work with me`}
-            </PageHeader>
+      <GutterContainer>
+        <InnerContainer>
+          <PageHeader>
+            {`Work with me`}
+          </PageHeader>
 
-            {getDescriptionParagraphs(services.description).map((description, index) => (
-              <p key={index}>
-                {description}
-              </p>
+          {getDescriptionParagraphs(services.description).map((description, index) => (
+            <p key={index}>
+              {description}
+            </p>
+          ))}
+
+          <ServicesContainer>
+            {services.services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                features={service.features || []}
+                mainCharge={service.mainCharge}
+                secondaryCharge={service.secondaryCharge}
+              />
             ))}
+          </ServicesContainer>
 
-            <ServicesContainer>
-              {services.services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  features={service.features || []}
-                  mainCharge={service.mainCharge}
-                  secondaryCharge={service.secondaryCharge}
-                />
-              ))}
-            </ServicesContainer>
-
-            <CallToAction />
-          </InnerContainer>
-        </GutterContainer>
-      </Container>
+          <CallToAction />
+        </InnerContainer>
+      </GutterContainer>
     </Layout>
   </Page>
 )

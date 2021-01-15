@@ -13,7 +13,6 @@ import {
 const Container = styled.section`
   display: flex;
   flex-direction: row;
-  margin-top: 2rem;
   padding: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;

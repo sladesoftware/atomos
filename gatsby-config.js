@@ -33,7 +33,7 @@ module.exports = {
       {
         text: "portfolio",
         path: "/portfolio",
-        active: false
+        active: true
       },
       {
         text: "products",

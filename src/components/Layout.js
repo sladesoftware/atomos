@@ -6,6 +6,7 @@ import { Footer } from "./Footer"
 import NavBar from "./NavBar"
 
 const Container = styled.div`
+  padding-top: 2rem;
 `
 
 const Layout = ({ children }) => (
