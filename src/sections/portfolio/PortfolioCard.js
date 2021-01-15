@@ -26,10 +26,12 @@ const HeaderText = styled.h3`
 const CardImage = styled.div`
   position: relative;
   flex: 1 auto;
+  text-align: center;
 `
 
 const Image = styled.img`
   margin: 0;
+  max-height: 250px;
 `
 
 const ViewIconContainer = styled.div`
@@ -52,7 +54,7 @@ const Description = styled.p`
 const CardActions = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
   margin-right: -1rem;
 `
 
@@ -78,7 +80,7 @@ const PortfolioCard = ({ title, imageUrl, siteUrl, description, tag, gitHubUrl }
     </CardHeader>
 
     <CardImage>
-      <Image src={imageUrl ?? "https://via.placeholder.com/400x250.png"} />
+      <Image src={!!imageUrl && imageUrl !== "" ? imageUrl : "https://via.placeholder.com/400x250.png"} />
 
       {siteUrl && (
         <ViewIconContainer>

@@ -1,8 +1,9 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Page, PageHeader, Layout, GutterContainer } from "components"
 import { PortfolioCard } from "sections/portfolio"
 
-const Portfolio = () => (
+const Portfolio = ({ data }) => (
   <Page title="Portfolio">
     <Layout>
       <GutterContainer>
@@ -10,18 +11,35 @@ const Portfolio = () => (
           {`Portfolio`}
         </PageHeader>
 
-        <PortfolioCard
-          title="Header"
-          description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.`}
-          siteUrl="https://www.sladesoftware.co.uk/"
-          gitHubUrl="https://github.com/sladesoftware/atomos"
-        />
+        {data.portfolio.items.map((item, index) => (
+          <PortfolioCard
+            key={index}
+            title={item.title}
+            description={item.description}
+            imageUrl={item.imageUrl}
+            siteUrl={item.siteUrl}
+            gitHubUrl={item.gitHubUrl}
+            tag={item.tag}
+          />
+        ))}
       </GutterContainer>
     </Layout>
   </Page>
 )
 
 export default Portfolio
+
+export const query = graphql`
+  query {
+    portfolio {
+      items {
+        title
+        description
+        imageUrl
+        siteUrl
+        gitHubUrl
+        tag
+      }
+    }
+  }
+`
