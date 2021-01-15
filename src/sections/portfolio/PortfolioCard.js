@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { ViewIcon } from "icons"
 import GitHub from "components/AccountLinks/GitHub"
@@ -68,41 +69,55 @@ const Spacer = styled.div`
   flex: 1 auto;
 `
 
-const PortfolioCard = () => (
+const PortfolioCard = ({ title, imageUrl, siteUrl, description, tag, gitHubUrl }) => (
   <Card>
     <CardHeader>
       <HeaderText>
-        Header
+        {title}
       </HeaderText>
     </CardHeader>
 
     <CardImage>
-      <Image src="https://via.placeholder.com/400x250.png" />
+      <Image src={imageUrl ?? "https://via.placeholder.com/400x250.png"} />
 
-      <ViewIconContainer>
-        <ViewIcon url="/portfolio" />
-      </ViewIconContainer>
+      {siteUrl && (
+        <ViewIconContainer>
+          <ViewIcon url={siteUrl} />
+        </ViewIconContainer>
+      )}
     </CardImage>
 
     <CardBody>
       <Description>
-        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.`}
+        {description}
       </Description>
     </CardBody>
 
     <CardActions>
-      <ReadMoreLink to="/">
-        {`read more`}
-      </ReadMoreLink>
+      {tag && (
+        <ReadMoreLink to={`/blog?tag=${tag}`}>
+          {`read more`}
+        </ReadMoreLink>
+      )}
 
       <Spacer />
 
-      <GitHub url="https://github.com/sladesoftware/atomos" />
+      {gitHubUrl ? (
+        <GitHub url={gitHubUrl} />
+      ) : (
+          <>{`Coming soon`}</>
+        )}
     </CardActions>
   </Card>
 )
+
+PortfolioCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string,
+  siteUrl: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  gitHubUrl: PropTypes.string
+}
 
 export default PortfolioCard
