@@ -5,10 +5,9 @@ import {
   Page,
   PageHeader,
   Layout,
-  ServiceCard,
   GutterContainer
 } from "components"
-import { CallToAction } from "sections/services"
+import { CallToAction, ServiceCard } from "sections/services"
 
 const Container = styled.div`
   margin-top: 2rem;
