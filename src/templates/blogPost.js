@@ -2,24 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { Page, Layout } from "components"
-
-const Centered = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const Container = styled.div`
-  max-width: 1024px;
-  margin: 2rem;
-`
+import { Page, Layout, GutterContainer } from "components"
 
 const Header = styled.div`
   display: flex;
 `
 
 const ReadTime = styled.div`
-
 `
 
 const Spacer = styled.div`
@@ -44,25 +33,23 @@ const BlogPost = ({ data }) => {
   return (
     <Page title={frontmatter.title}>
       <Layout>
-        <Centered>
-          <Container>
-            <Header>
-              <ReadTime>
-                Read time: {getReadTime(timeToRead)}
-              </ReadTime>
+        <GutterContainer>
+          <Header>
+            <ReadTime>
+              Read time: {getReadTime(timeToRead)}
+            </ReadTime>
 
-              <Spacer />
+            <Spacer />
 
-              <DatePublished>
-                {frontmatter.date}
-              </DatePublished>
-            </Header>
+            <DatePublished>
+              {frontmatter.date}
+            </DatePublished>
+          </Header>
 
-            <MDXRenderer>
-              {body}
-            </MDXRenderer>
-          </Container>
-        </Centered>
+          <MDXRenderer>
+            {body}
+          </MDXRenderer>
+        </GutterContainer>
       </Layout>
     </Page>
   )
