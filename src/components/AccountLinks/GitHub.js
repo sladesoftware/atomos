@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import AccountLink from "./AccountLink"
+import { GitHubIcon } from "icons"
 
 const GitHub = ({ url }) => (
   <AccountLink url={url}>
-    <FontAwesomeIcon icon={faGithub} />
+    <GitHubIcon />
   </AccountLink>
 )
 

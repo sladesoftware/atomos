@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { ViewIcon } from "icons"
-import GitHub from "components/AccountLinks/GitHub"
+import { IconLink } from "components"
+import { GitHubIcon, ViewIcon } from "icons"
 
 const Card = styled.div`
   display: flex;
@@ -56,7 +56,6 @@ const CardActions = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0 0.5rem 0.5rem 0.5rem;
-  margin-right: -1rem;
 `
 
 const ReadMoreLink = styled(Link)`
@@ -108,9 +107,11 @@ const PortfolioCard = ({ title, imageUrl, siteUrl, description, tag, gitHubUrl, 
       {showGitHub && (
         <>
           {gitHubUrl ? (
-            <GitHub url={gitHubUrl} />
+            <IconLink url={gitHubUrl}>
+              <GitHubIcon />
+            </IconLink>
           ) : (
-              <>{`Coming soon`}</>
+              <i>{`coming soon`}</i>
             )}
         </>
       )}

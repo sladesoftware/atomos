@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { IconLink } from "components"
 
 const Container = styled.div`
   display: inline-block;
@@ -9,20 +10,11 @@ const Container = styled.div`
   font-size: 1.4rem;
 `
 
-const StyledLink = styled.a`
-  color: unset;
-  transition: color 0.1s ease-out;
-  
-  &:hover {
-    color: ${props => props.theme.colors.secondary};
-  }
-`
-
 const AccountLink = ({ url, children }) => (
   <Container data-sal="slide-up" data-sal-duration="1000">
-    <StyledLink href={url} target="_blank">
+    <IconLink url={url}>
       {children}
-    </StyledLink>
+    </IconLink>
   </Container>
 )
 
