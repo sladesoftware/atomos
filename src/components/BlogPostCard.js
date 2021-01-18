@@ -26,6 +26,7 @@ const Spacer = styled.div`
 
 const Subtitle = styled.h4`
   display: inline-block;
+  white-space: nowrap;
 `
 
 const Content = styled.p`
@@ -42,6 +43,7 @@ const ReadTime = styled.div`
   display: inline-block;
   font-variant: small-caps;
   color: ${props => props.theme.colors.muted};
+  white-space: nowrap;
 `
 
 const StyledLink = styled(Link)`
