@@ -10,6 +10,7 @@ const Card = styled.div`
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
   max-width: 20rem;
+  margin-bottom: 2rem;
 `
 
 // Header
@@ -71,7 +72,7 @@ const Spacer = styled.div`
   flex: 1 auto;
 `
 
-const PortfolioCard = ({ title, imageUrl, siteUrl, description, tag, gitHubUrl }) => (
+const PortfolioCard = ({ title, imageUrl, siteUrl, description, tag, gitHubUrl, showGitHub }) => (
   <Card>
     <CardHeader>
       <HeaderText>
@@ -104,14 +105,22 @@ const PortfolioCard = ({ title, imageUrl, siteUrl, description, tag, gitHubUrl }
 
       <Spacer />
 
-      {gitHubUrl ? (
-        <GitHub url={gitHubUrl} />
-      ) : (
-          <>{`Coming soon`}</>
-        )}
+      {showGitHub && (
+        <>
+          {gitHubUrl ? (
+            <GitHub url={gitHubUrl} />
+          ) : (
+              <>{`Coming soon`}</>
+            )}
+        </>
+      )}
     </CardActions>
   </Card>
 )
+
+PortfolioCard.defaultProps = {
+  showGitHub: false
+}
 
 PortfolioCard.propTypes = {
   title: PropTypes.string.isRequired,
@@ -119,7 +128,8 @@ PortfolioCard.propTypes = {
   siteUrl: PropTypes.string,
   description: PropTypes.string.isRequired,
   tag: PropTypes.string,
-  gitHubUrl: PropTypes.string
+  gitHubUrl: PropTypes.string,
+  showGitHub: PropTypes.bool
 }
 
 export default PortfolioCard
