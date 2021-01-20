@@ -5,14 +5,13 @@ import { ViewIcon } from "icons"
 
 const Container = styled.div`
   position: relative;
-  flex: 1 auto;
   text-align: center;
   overflow: hidden;
+  height: 190px;
 `
 
 const Image = styled.img`
   margin: 0;
-  max-height: 250px;
 `
 
 const ViewIconContainer = styled.div`
@@ -36,7 +35,7 @@ const TypeBanner = styled.div`
 
 const CardImage = ({ imageUrl, siteUrl, type }) => (
   <Container>
-    <Image src={!!imageUrl && imageUrl !== "" ? imageUrl : "https://via.placeholder.com/400x250.png"} />
+    <Image src={!!imageUrl && imageUrl !== "" ? imageUrl : "https://via.placeholder.com/360x190.png"} />
 
     {siteUrl && (
       <ViewIconContainer>

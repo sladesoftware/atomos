@@ -46,7 +46,7 @@ const PortfolioCard = props => {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader title={title}>
         <HeaderText>
           {title}
         </HeaderText>
