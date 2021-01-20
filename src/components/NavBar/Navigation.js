@@ -46,16 +46,16 @@ const NavBar = () => {
       {pages
         .filter(page => page.active)
         .map((page, index) => (
-        <NavItem
-          key={index}
-          data-sal="fade"
-          data-sal-delay={(index + 1) * 100}
-        >
-          <NavLink to={page.path}>
-            {page.text}
-          </NavLink>
-        </NavItem>
-      ))}
+          <NavItem
+            key={index}
+            data-sal="fade"
+            data-sal-delay={(index + 1) * 100}
+          >
+            <NavLink to={page.path}>
+              {page.text}
+            </NavLink>
+          </NavItem>
+        ))}
     </NavLinks>
   )
 }

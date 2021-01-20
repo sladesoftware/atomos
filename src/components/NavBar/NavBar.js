@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import GutterContainer from "./GutterContainer"
-import Navigation from "./Navigation"
-import { AccountLinks } from "./AccountLinks"
+import { media } from "styles"
 import logo from "images/logo-transparent.png"
+import GutterContainer from "../GutterContainer"
+import Navigation from "./Navigation"
+import { AccountLinks } from "../AccountLinks"
+import MobileMenu from "./MobileMenu"
 
 const Nav = styled.nav`
   position: fixed;
@@ -32,6 +34,22 @@ const Spacer = styled.div`
   flex-grow: 1;
 `
 
+const TabletAndDesktopContainer = styled.div`
+  display: flex;
+
+  ${media.phone`
+    display: none;
+  `}
+`
+
+const MobileContainer = styled.div`
+  display: none;
+
+  ${media.phone`
+    display: inline-block;
+  `}
+`
+
 const NavBar = () => (
   <Nav>
     <GutterContainer>
@@ -41,8 +59,15 @@ const NavBar = () => (
         </Link>
 
         <Spacer />
-        <Navigation />
-        <AccountLinks />
+
+        <TabletAndDesktopContainer>
+          <Navigation />
+          <AccountLinks />
+        </TabletAndDesktopContainer>
+        
+        <MobileContainer>
+          <MobileMenu />
+        </MobileContainer>
       </InnerContainer>
     </GutterContainer>
   </Nav>

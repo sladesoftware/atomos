@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Main from "./Main"
 import { Footer } from "./Footer"
-import NavBar from "./NavBar"
+import { NavBar } from "./NavBar"
 
 const Container = styled.div`
   padding-top: 2rem;
