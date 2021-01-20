@@ -7,32 +7,37 @@
       "gitHubUrl": "https://github.com/sladesoftware/atomos",
       "imageUrl": "project-atomos.png",
       "tag": "",
-      "showGitHub": true
+      "showGitHub": true,
+      "type": "project"
     },
     {
       "title": "Project Aphrodite",
       "description": "An information website and RSVP portal for mine and my partner's wedding in 2022.",
       "imageUrl": "project-aphrodite.png",
-      "showGitHub": true
+      "showGitHub": true,
+      "type": "project"
     },
     {
       "title": "Managing Docker Logs with ELK and Fluentd",
       "description": "Article written for Coralogix, an end client of WriteOps Ltd, that describes how to manage application logs in Docker by using the Elastic Stack with Fluentd.",
       "siteUrl": "http://www.sladesoftware.co.uk/blog/managing-docker-logs-with-elk-and-fluentd",
-      "showGitHub": false
+      "showGitHub": false,
+      "type": "article"
     },
     {
       "title": "Logging Best Practices in .NET Core 3.1",
       "description": "Article written for Coralogix, an end client of WriteOps Ltd, that talks about the best practices that can be applied when outputting application information in .NET Core 3.1.",
       "siteUrl": "http://www.sladesoftware.co.uk/blog/logging-best-practices-in-net-core-3-1",
       "gitHubUrl": "https://github.com/sladesoftware/dotnet-core-3-1",
-      "showGitHub": true
+      "showGitHub": true,
+      "type": "article"
     },
     {
       "title": "Running Elasticsearch, Logstash, and Kibana on Kubernetes with Helm",
       "description": "Article written for Coralogix, an end client of WriteOps Ltd, that walks through setting up the Elastic Stack on Kubernetes using Helm Charts.",
       "siteUrl": "http://www.sladesoftware.co.uk/blog/running-elasticsearch-logstash-and-kibana-on-kubernetes-with-helm",
-      "showGitHub": false
+      "showGitHub": false,
+      "type": "article"
     }
   ]
 }

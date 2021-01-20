@@ -25,16 +25,7 @@ const Portfolio = ({ data }) => (
 
         <PortfolioItems>
           {data.portfolio.items.map((item, index) => (
-            <PortfolioCard
-              key={index}
-              title={item.title}
-              description={item.description}
-              imageUrl={item.imageUrl}
-              siteUrl={item.siteUrl}
-              gitHubUrl={item.gitHubUrl}
-              tag={item.tag}
-              showGitHub={item.showGitHub}
-            />
+            <PortfolioCard key={index} {...item} />
           ))}
         </PortfolioItems>
       </GutterContainer>
@@ -55,6 +46,7 @@ export const query = graphql`
         gitHubUrl
         tag
         showGitHub
+        type
       }
     }
   }
