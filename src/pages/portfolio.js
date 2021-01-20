@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { media } from "styles"
 import { Page, PageHeader, Layout, GutterContainer } from "components"
 import { PortfolioCard } from "sections/portfolio"
 
@@ -12,6 +13,10 @@ const PortfolioItems = styled.div`
 
   & > * {
     margin-right: 2rem;
+
+    ${media.phone`
+      margin-right: 0;
+    `}
   }
 `
 
