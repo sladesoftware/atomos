@@ -1,5 +1,4 @@
 export * from "./AccountLinks"
-export { default as BlogPostCard } from "./BlogPostCard"
 export { default as CenteredLayout } from "./CenteredLayout"
 export { default as CircularImage } from "./CircularImage"
 export * from "./Footer"

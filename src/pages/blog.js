@@ -1,50 +1,42 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "styled-components"
 import {
   Page,
   PageHeader,
   Layout,
-  GutterContainer,
-  BlogPostCard
+  GutterContainer
 } from "components"
-
-const Centered = styled.div`
-  display: flex;
-  justify-content: center;
-`
+import { BlogPostCard } from "sections/blog"
 
 const Blog = ({ data }) => (
   <Page title="Blog">
     <Layout>
-      <Centered>
-        <GutterContainer>
-          <PageHeader>
-            {`Posts`}
-          </PageHeader>
+      <GutterContainer>
+        <PageHeader>
+          {`Posts`}
+        </PageHeader>
 
-          {data && data.allMdx.nodes.map((post, index) => (
-            <div
-              key={index}
-              data-sal="slide-up"
-              data-sal-delay={index * 100}
-              data-sal-duration={500}
-            >
-              <BlogPostCard
-                title={post.frontmatter.title}
-                subtitle={post.frontmatter.date}
-                text={post.excerpt}
-                readTime={post.timeToRead}
-                url={post.frontmatter.slug}
-              />
+        {data && data.allMdx.nodes.map((post, index) => (
+          <div
+            key={index}
+            data-sal="slide-up"
+            data-sal-delay={index * 100}
+            data-sal-duration={500}
+          >
+            <BlogPostCard
+              title={post.frontmatter.title}
+              subtitle={post.frontmatter.date}
+              text={post.excerpt}
+              readTime={post.timeToRead}
+              url={post.frontmatter.slug}
+            />
 
-              {index < data.allMdx.nodes.length - 1 && (
-                <hr />
-              )}
-            </div>
-          ))}
-        </GutterContainer>
-      </Centered>
+            {index < data.allMdx.nodes.length - 1 && (
+              <hr />
+            )}
+          </div>
+        ))}
+      </GutterContainer>
     </Layout>
   </Page>
 )
