@@ -16,6 +16,7 @@ const Nav = styled.nav`
   padding: 1rem;
   background-color: white;
   z-index: 1000;
+  height: 3rem;
 `
 
 const InnerContainer = styled.div`
