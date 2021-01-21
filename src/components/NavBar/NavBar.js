@@ -50,6 +50,13 @@ const MobileContainer = styled.div`
   `}
 `
 
+const MenuSeparator = styled.hr`
+  height: 1px;
+  width: 100%;
+  color: #999;
+  margin: 1rem 0;
+`
+
 const NavBar = () => (
   <Nav>
     <GutterContainer>
@@ -61,12 +68,16 @@ const NavBar = () => (
         <Spacer />
 
         <TabletAndDesktopContainer>
-          <Navigation />
+          <Navigation direction="row" />
           <AccountLinks />
         </TabletAndDesktopContainer>
         
         <MobileContainer>
-          <MobileMenu />
+          <MobileMenu>
+            <Navigation direction="column" />
+            <MenuSeparator />
+            <AccountLinks />
+          </MobileMenu>
         </MobileContainer>
       </InnerContainer>
     </GutterContainer>

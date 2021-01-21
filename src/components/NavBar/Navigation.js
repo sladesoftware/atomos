@@ -1,8 +1,11 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 const NavLinks = styled.ul`
+  display: flex;
+  flex-direction: ${props => props.direction};
   list-style-type: none;
   margin: 0;
 `
@@ -36,13 +39,13 @@ const QUERY = graphql`
   }
 `
 
-const NavBar = () => {
+const NavBar = ({ direction }) => {
   const { site } = useStaticQuery(QUERY)
 
   const pages = (site && site.siteMetadata && site.siteMetadata.pages) || []
 
   return (
-    <NavLinks>
+    <NavLinks direction={direction}>
       {pages
         .filter(page => page.active)
         .map((page, index) => (
@@ -58,6 +61,14 @@ const NavBar = () => {
         ))}
     </NavLinks>
   )
+}
+
+NavBar.defaultProps = {
+  direction: "row"
+}
+
+NavBar.propTypes = {
+  direction: PropTypes.oneOf(["row", "column"])
 }
 
 export default NavBar
