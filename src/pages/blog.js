@@ -17,24 +17,14 @@ const Blog = ({ data }) => (
         </PageHeader>
 
         {data && data.allMdx.nodes.map((post, index) => (
-          <div
+          <BlogPostCard
             key={index}
-            data-sal="slide-up"
-            data-sal-delay={index * 100}
-            data-sal-duration={500}
-          >
-            <BlogPostCard
-              title={post.frontmatter.title}
-              subtitle={post.frontmatter.date}
-              text={post.excerpt}
-              readTime={post.timeToRead}
-              url={post.frontmatter.slug}
-            />
-
-            {index < data.allMdx.nodes.length - 1 && (
-              <hr />
-            )}
-          </div>
+            title={post.frontmatter.title}
+            publishedDate={post.frontmatter.date}
+            text={post.excerpt}
+            readTime={post.timeToRead}
+            url={post.frontmatter.slug}
+          />
         ))}
       </GutterContainer>
     </Layout>

@@ -3,47 +3,53 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEye } from "@fortawesome/free-solid-svg-icons"
+import { faEye, faBookOpen } from "@fortawesome/free-solid-svg-icons"
+import { Date, IconText } from "components"
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   margin: 1rem 0;
 `
 
-const TitleContainer = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-`
-
 const Title = styled.h1`
-  display: inline-block;
-`
-
-const Spacer = styled.div`
-  display: inline-block;
-  flex-grow: 1;
-`
-
-const Subtitle = styled.h4`
-  display: inline-block;
+  display: block;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `
 
 const Content = styled.p`
+  flex: 1 auto;
   margin: 0;
+`
+
+const ActionContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.5rem 0.5rem;
+  border: 0;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: #ddd;
 `
 
 const Actions = styled.div`
   display: flex;
-  align-items: center;
-  margin-top: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  & > div {
+    margin-right: 2rem;
+  }
 `
 
-const ReadTime = styled.div`
-  display: inline-block;
-  font-variant: small-caps;
-  color: ${props => props.theme.colors.muted};
-  white-space: nowrap;
+const Spacer = styled.div`
+  flex: 1 auto;
 `
 
 const StyledLink = styled(Link)`
@@ -62,41 +68,34 @@ const getReadTime = readTime => {
   return `${readTime} minutes`
 }
 
-const BlogPostCard = ({ title, subtitle, text, readTime, url }) => (
+const BlogPostCard = ({ title, publishedDate, text, readTime, url }) => (
   <Container>
-    <TitleContainer>
-      <Title>
-        {title}
-      </Title>
-
-      <Spacer />
-
-      <Subtitle>
-        {subtitle}
-      </Subtitle>
-    </TitleContainer>
+    <Title>
+      {title}
+    </Title>
 
     <Content>
       {text}
     </Content>
 
-    <Actions>
-      <ReadTime>
-        {getReadTime(readTime)}
-      </ReadTime>
+    <ActionContainer>
+      <Actions>
+        <Date date={publishedDate} />
+        <IconText icon={faBookOpen} text={getReadTime(readTime)} />
+      </Actions>
 
       <Spacer />
 
       <StyledLink to={url} title="View">
         <FontAwesomeIcon icon={faEye} />
       </StyledLink>
-    </Actions>
+    </ActionContainer>
   </Container>
 )
 
 BlogPostCard.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
+  publishedDate: PropTypes.string,
   text: PropTypes.string.isRequired,
   readTime: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired
