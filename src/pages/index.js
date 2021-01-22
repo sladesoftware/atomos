@@ -15,6 +15,9 @@ const Subtitle = styled.h2`
 `
 
 const NavContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0 0 1rem 0;
 `
 
