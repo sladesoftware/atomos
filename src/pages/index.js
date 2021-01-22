@@ -35,6 +35,7 @@ const IndexPage = () => (
         </Subtitle>
 
         <NavContainer>
+          test
           <Navigation />
         </NavContainer>
         
