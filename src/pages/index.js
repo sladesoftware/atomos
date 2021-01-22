@@ -2,13 +2,20 @@ import React from "react"
 import styled from "styled-components"
 import {
   AccountLinks,
-  CenteredLayout,
   Footer,
   Logo,
   Main,
   Navigation,
   Page
 } from "components"
+
+const Container = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 const Subtitle = styled.h2`
   color: ${props => props.theme.colors.secondary};
@@ -23,8 +30,8 @@ const NavContainer = styled.div`
 
 const IndexPage = () => (
   <Page title="Home">
-    <CenteredLayout>
-      <Main>
+    <Main applyTopPadding={false}>
+      <Container>
         <Logo />
         <Subtitle
           data-sal="fade"
@@ -37,12 +44,12 @@ const IndexPage = () => (
         <NavContainer>
           <Navigation />
         </NavContainer>
-        
-        <AccountLinks />
-      </Main>
 
-      <Footer />
-    </CenteredLayout>
+        <AccountLinks />
+      </Container>
+    </Main>
+
+    <Footer />
   </Page>
 )
 

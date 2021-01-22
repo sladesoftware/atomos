@@ -1,5 +1,4 @@
 export * from "./AccountLinks"
-export { default as CenteredLayout } from "./CenteredLayout"
 export { default as CircularImage } from "./CircularImage"
 export { default as Date } from "./Date"
 export * from "./Footer"
