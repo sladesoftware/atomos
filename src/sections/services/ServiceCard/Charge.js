@@ -41,7 +41,7 @@ const SecondaryRateText = styled.h3`
   margin: 0;
 `
 
-const SecondaryUnitText = styled.h3`
+const SecondaryUnitText = styled.h4`
   font-weight: normal;
   display: inline-block;
   color: #666;
