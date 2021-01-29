@@ -24,6 +24,7 @@ const Blog = ({ data }) => (
             text={post.excerpt}
             readTime={post.timeToRead}
             url={post.frontmatter.slug}
+            tags={post.frontmatter.tags.split(",")}
           />
         ))}
       </GutterContainer>
@@ -47,6 +48,7 @@ export const query = graphql`
           slug
           title
           date(formatString: "Do MMM YYYY")
+          tags
         }
       }
     }

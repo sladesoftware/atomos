@@ -4,7 +4,9 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEye, faBookOpen } from "@fortawesome/free-solid-svg-icons"
+import { media } from "styles"
 import { Date, IconText } from "components"
+import Tags from "./Tags"
 
 const Container = styled.div`
   display: flex;
@@ -42,10 +44,15 @@ const Actions = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   & > div {
     margin-right: 2rem;
   }
+
+  ${media.phone`
+    flex-direction: column;
+  `}
 `
 
 const Spacer = styled.div`
@@ -68,7 +75,7 @@ const getReadTime = readTime => {
   return `${readTime} minutes`
 }
 
-const BlogPostCard = ({ title, publishedDate, text, readTime, url }) => (
+const BlogPostCard = ({ title, publishedDate, text, readTime, url, tags }) => (
   <Container>
     <Title>
       {title}
@@ -82,6 +89,7 @@ const BlogPostCard = ({ title, publishedDate, text, readTime, url }) => (
       <Actions>
         <Date date={publishedDate} />
         <IconText icon={faBookOpen} text={getReadTime(readTime)} />
+        <Tags tags={tags} />
       </Actions>
 
       <Spacer />
@@ -93,12 +101,17 @@ const BlogPostCard = ({ title, publishedDate, text, readTime, url }) => (
   </Container>
 )
 
+BlogPostCard.defaultProps = {
+  tags: []
+}
+
 BlogPostCard.propTypes = {
   title: PropTypes.string.isRequired,
   publishedDate: PropTypes.string,
   text: PropTypes.string.isRequired,
   readTime: PropTypes.number.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default BlogPostCard
