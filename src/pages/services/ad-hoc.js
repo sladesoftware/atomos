@@ -51,8 +51,8 @@ const AdHocPage = ({ data }) => {
           <Paragraph>
             {`When compared with market rates for development contractors, a rate of £${service.mainCharge.rate}/${service.mainCharge.unit} may sound like
             a lot. However, I charge this amount specifically for ad hoc work as this type of work prevents me from taking on other work at the same time.
-            Also, as it is billed based on time spent, rather than signing a longer term contract, the work is often short lived. This presents a high risk,
-            as it is more difficult to collect a lot of this type of work. These are the justifications behind the advertised rate.`}
+            Also, as it is billed based on time spent, rather than signing a longer term contract, the work is often short lived. This presents a higher risk
+            to me, as it is more difficult to collect a lot of this type of work. These are a few justifications behind the advertised rate.`}
           </Paragraph>
           <Paragraph>
             {`Beyond these difficulties with this type of work, I also pride myself on delivering high-quality work that I have done myself
@@ -84,11 +84,16 @@ const AdHocPage = ({ data }) => {
             {`OK, I'm interested. What do I do now?`}
           </SubHeader>
           <Paragraph>
-            {`Get in touch! I would love to virtually meet you and find out more about your business. You can drop me an email at:`}
+            {`Get in touch! I would love to virtually meet you and find out more about your business.`}
+          </Paragraph>
+          <Paragraph>
+            {`You can drop me an email at: `}
             <a href={`mailto:${email}?subject=Ad Hoc Services Enquiry`}>
               {email}
             </a>
-            {`I look forward to hearing from you!`}
+          </Paragraph>
+          <Paragraph>
+            {` I look forward to hearing from you!`}
           </Paragraph>
         </GutterContainer>
       </Layout>
