@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useCompanyDetails } from "queries"
 
 const Container = styled.div`
   margin: 2rem 0;
@@ -48,28 +49,32 @@ const SubText = styled.h6`
   font-weight: normal;
 `
 
-const CallToAction = () => (
-  <Container>
-    <Panel>
-      <Header>
-        {`Get in touch to learn more!`}
-      </Header>
+const CallToAction = () => {
+  const { email } = useCompanyDetails()
 
-      <Line />
+  return (
+    <Container>
+      <Panel>
+        <Header>
+          {`Get in touch to learn more!`}
+        </Header>
 
-      <Button href="mailto:samuel.slade@sladesoftware.co.uk?subject=Services Enquiry">
-        <ButtonText>
-          {`Drop me an`}
-          <br />
-          {`Email`}
-        </ButtonText>
-      </Button>
+        <Line />
 
-      <SubText>
-        {`(Opens your default email app)`}
-      </SubText>
-    </Panel>
-  </Container>
-)
+        <Button href={`mailto:${email}?subject=Services Enquiry`}>
+          <ButtonText>
+            {`Drop me an`}
+            <br />
+            {`Email`}
+          </ButtonText>
+        </Button>
+
+        <SubText>
+          {`(Opens your default email app)`}
+        </SubText>
+      </Panel>
+    </Container>
+  )
+}
 
 export default CallToAction

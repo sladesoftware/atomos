@@ -5,6 +5,7 @@ import CardTitle from "./CardTitle"
 import Features from "./Features"
 import Charge from "./Charge"
 import GetInTouch from "./GetInTouch"
+import ViewDetail from "./ViewDetail"
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const Container = styled.div`
   width: 20rem;
 `
 
-const ServiceCard = ({ title, features, mainCharge, secondaryCharge }) => (
+const ServiceCard = ({ title, features, mainCharge, secondaryCharge, pageUrl }) => (
   <Container>
     <CardTitle title={title} />
     <Features features={features} />
@@ -27,6 +28,8 @@ const ServiceCard = ({ title, features, mainCharge, secondaryCharge }) => (
     {!mainCharge && !secondaryCharge && (
       <GetInTouch />
     )}
+
+    {pageUrl && <ViewDetail url={pageUrl} />}
   </Container>
 )
 
@@ -40,7 +43,8 @@ ServiceCard.propTypes = {
   secondaryCharge: PropTypes.shape({
     rate: PropTypes.number.isRequired,
     unit: PropTypes.string.isRequired
-  })
+  }),
+  pageUrl: PropTypes.string
 }
 
 export default ServiceCard

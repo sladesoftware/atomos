@@ -48,6 +48,7 @@ const Services = ({ data: { services } }) => (
                 features={service.features || []}
                 mainCharge={service.mainCharge}
                 secondaryCharge={service.secondaryCharge}
+                pageUrl={service.pageUrl}
               />
             ))}
           </ServicesContainer>
@@ -76,6 +77,7 @@ export const query = graphql`
           rate
           unit
         }
+        pageUrl
       }
     }
   }

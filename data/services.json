@@ -24,7 +24,8 @@
       "secondaryCharge": {
         "rate": 85,
         "unit": "hour"
-      }
+      },
+      "pageUrl": "/services/ad-hoc"
     },
     {
       "title": "Retainer",
