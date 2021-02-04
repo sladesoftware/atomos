@@ -2,8 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Page, Layout, GutterContainer } from "components"
 import { Header, SubHeader, Paragraph } from "components/typography"
+import { useCompanyDetails } from "queries"
 
 const AdHocPage = ({ data }) => {
+  const { email } = useCompanyDetails()
+
   const services = (data && data.services && data.services.services) || []
   const service = services.find(x => x.title === "Ad Hoc")
 
@@ -57,24 +60,35 @@ const AdHocPage = ({ data }) => {
           </Paragraph>
 
           <SubHeader>
-            {`Who might benefit from this type of work?`}
-          </SubHeader>
-          <Paragraph>
-            {`Lorem Ipsum`}
-          </Paragraph>
-
-          <SubHeader>
             {`We haven't worked together before, so how will this work?`}
           </SubHeader>
           <Paragraph>
-            {`Lorem Ipsum`}
+            {`I aim for our relationship to be a long one. As such, I will take the time to get to you know you and your business before I agree to take on
+            any work. This way I can provide you with assurances that I will be able to deliver the work that you require at the level of quality I pride
+            myself on. My approach here is twofold:`}
+          </Paragraph>
+          <ol>
+            <li>{`I will start by booking in a few calls and virtual meetings so that we can discuss openly your business and requirements. This will give
+            me initial insight into the type of work that may be required and where I can possibly add value.`}</li>
+            <li>{`Once I understand enough about how I can deliver value to you, I will agree to take on some work. In the early stages of delivering services
+            to you, it may take me a little longer than normal to complete the work as I will have to gain deeper insights into your products and solutions
+            whilst I am working with them. I maintain a focused approach here; only delving into what is relevant to the task at hand.`}</li>
+          </ol>
+          <Paragraph>
+            {`The longer that we work
+            together, the more I will come to understand the deeper complexities of your business, and so the less time it will take for me to complete any
+            work.`}
           </Paragraph>
 
           <SubHeader>
             {`OK, I'm interested. What do I do now?`}
           </SubHeader>
           <Paragraph>
-            {`Lorem Ipsum`}
+            {`Get in touch! I would love to virtually meet you and find out more about your business. You can drop me an email at:`}
+            <a href={`mailto:${email}?subject=Ad Hoc Services Enquiry`}>
+              {email}
+            </a>
+            {`I look forward to hearing from you!`}
           </Paragraph>
         </GutterContainer>
       </Layout>
