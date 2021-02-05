@@ -39,7 +39,8 @@
       "mainCharge": {
         "rate": 3000,
         "unit": "month"
-      }
+      },
+      "pageUrl": "/services/retainer"
     },
     {
       "title": "Projects",
