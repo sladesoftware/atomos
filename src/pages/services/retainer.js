@@ -53,10 +53,19 @@ const RetainerPage = ({ data }) => {
           </List>
 
           <SubHeader>
+            {`What is not covered?`}
+          </SubHeader>
+          <Paragraph>
+            {`The retainer agreement is an advice-based service, therefore it does not cover any implementation
+            or delivery of any work. If you are looking for someone to help deliver your work by implementing it,
+            then you may benefit more from either my Ad Hoc or Project-based services.`}
+          </Paragraph>
+
+          <SubHeader>
             {`How much do you charge?`}
           </SubHeader>
           <Paragraph>
-            {`My retainer fee is ${service.mainCharge.rate}/${service.mainCharge.unit}. This is based on a rolling
+            {`My retainer fee is £${service.mainCharge.rate}/${service.mainCharge.unit}. This is based on a rolling
             contract, so you are not tied in for any period of time. For every paid ${service.mainCharge.unit}, you
             gain access to my knowledge, expertise and support for that entire period to a reasonably unlimited extent.`}
           </Paragraph>
