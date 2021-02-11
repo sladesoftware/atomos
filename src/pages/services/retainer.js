@@ -78,7 +78,7 @@ const RetainerPage = ({ data }) => {
             you and your business a little. Assuming that I agree that I am able to support you and that the retainer
             approach is the best fit for you, then I will send out a contract for you to sign and your first invoice will
             be due. Once this contract has been signed and the invoice paid, I will arrange one or more calls to go
-            a little deeper into the areas that I might be able to help you. I will take this time to learn more about your
+            a little deeper into the areas where I might be able to help you. I will take this time to learn more about your
             business, products and technical strategy, so that I can identify how best to help support your business. Given
             this phase will take a little time, I will offer a grace period to cover this "getting to know you" part before
             your first retainer period comes into effect. Beyond this, I will continue to keep in touch whilst the retainer
