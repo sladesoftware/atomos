@@ -2,11 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Page, Layout, GutterContainer } from "components"
 import { Header, SubHeader, Paragraph } from "components/typography"
-import { useCompanyDetails } from "queries"
+import { ServicePageContact } from "sections/services"
 
 const AdHocPage = ({ data }) => {
-  const { email } = useCompanyDetails()
-
   const services = (data && data.services && data.services.services) || []
   const service = services.find(x => x.title === "Ad Hoc")
 
@@ -80,21 +78,7 @@ const AdHocPage = ({ data }) => {
             work.`}
           </Paragraph>
 
-          <SubHeader>
-            {`OK, I'm interested. What do I do now?`}
-          </SubHeader>
-          <Paragraph>
-            {`Get in touch! I would love to virtually meet you and find out more about your business.`}
-          </Paragraph>
-          <Paragraph>
-            {`You can drop me an email at: `}
-            <a href={`mailto:${email}?subject=Ad Hoc Services Enquiry`}>
-              {email}
-            </a>
-          </Paragraph>
-          <Paragraph>
-            {` I look forward to hearing from you!`}
-          </Paragraph>
+          <ServicePageContact serviceTitle={service.title} />
         </GutterContainer>
       </Layout>
     </Page>
